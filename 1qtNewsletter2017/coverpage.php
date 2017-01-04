@@ -30,7 +30,7 @@
   </main>
     This is the content of the page
   <footer>
-    <?php include("includes/footer.html");?>
+    <?php include("/footer.html");?>
   </footer>
 </body>
 </html>
