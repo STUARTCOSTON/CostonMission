@@ -1,14 +1,10 @@
 <html>
-  
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/general.css">
-  
 <head>
   <title> About Me </title>
-
 <style>
 </style>
-
 </head>
 <body>
   <?php include("header.html");?>
@@ -29,6 +25,7 @@
   </main>
     This is the content of the page
   <footer>
+    <html-include src="footer.html"></html-include>
     <?php include("https://rawgit.com/stuartcoston/CostonMission/master/1qtNewsletter2017/footer.html");?>
   </footer>
 </body>
