@@ -38,4 +38,4 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 ### Link to view the published site content
 
-[Cover Page](https://rawgit.com/stuartcoston/CostonMission/master/coverpage.html)
+[Cover Page](https://rawgit.com/stuartcoston/CostonMission/master/1qtNewsletter2017/coverpage.html)
