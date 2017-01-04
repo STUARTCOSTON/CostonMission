@@ -7,8 +7,8 @@
 </style>
 </head>
 <body>
-  <?php include("header.html");?>
-  <?php include("navigation.html");?>
+  {% include header.html %}
+  {% inlcude navigation.html %}
   <header>
     This is the coverpage header
   </header>
@@ -25,8 +25,8 @@
   </main>
     This is the content of the page
   <footer>
-    <html-include src="footer.html"></html-include>
-    <?php include("https://rawgit.com/stuartcoston/CostonMission/master/1qtNewsletter2017/footer.html");?>
+    <html-include src="/footer.html"></html-include>
+    {% include footer.html %}
   </footer>
 </body>
 </html>
