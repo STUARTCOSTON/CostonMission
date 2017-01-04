@@ -1,4 +1,3 @@
-<!doctype html>
 <html>
   
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,8 +11,8 @@
 
 </head>
 <body>
-  <?php include("/header.html");?>
-  <?php include("/navigation.html");?>
+  <?php include("header.html");?>
+  <?php include("navigation.html");?>
   <header>
     This is the coverpage header
   </header>
@@ -30,7 +29,7 @@
   </main>
     This is the content of the page
   <footer>
-    <?php include("/footer.html");?>
+    <?php include("https://rawgit.com/stuartcoston/CostonMission/master/1qtNewsletter2017/footer.html");?>
   </footer>
 </body>
 </html>
