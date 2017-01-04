@@ -2,7 +2,7 @@
 <html>
   
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="/general.css">
   
 <head>
   <title> About Me </title>
@@ -12,24 +12,15 @@
 
 </head>
 <body>
+  <?php include("/header.html");?>
+  <?php include("/navigation.html");?>
   <header>
     This is a header
   </header>
-  <nav>
-    <ul>
-      <li>
-        <a href = "homepage.html">Home</a>
-      </li>
-      <li>
-        <a href = "aboutpage.html">About</a>
-      </li>
-      <li>
-        <a href = "contactpage.html">Contact</a>
-      </li>
-    </ul>
-  </nav>
   <main>
-    <h1>About me</h1>
+    <h1>
+      About me
+    </h1>
     <p style="font-style: italic;">
       A tragedy
     </p>
@@ -37,7 +28,9 @@
       Text in a "p"
     </p>
   </main>
+    This is the content of the page
   <footer>
+    <?php include("includes/footer.html");?>
   </footer>
 </body>
 </html>
