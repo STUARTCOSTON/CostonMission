@@ -1,6 +1,24 @@
 header {
-color: #777;
+  color: #777;
 }
 p {
-color: #002200;
+  color: #002200;
+}
+
+/****** Navigation ******/
+.page-back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(20,20,20,0.4);
+  height: 100%;
+  width: 20px;
+}
+.page-forward {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgba(20,20,20,0.4);
+  height: 100%;
+  width: 20px;
 }
