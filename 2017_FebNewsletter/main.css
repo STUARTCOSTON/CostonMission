@@ -1,13 +1,17 @@
 header {
   color: #777;
 }
-p {
-  color: #ff22ff;
+main {
+  color: #fff;
 }
 
 /****** Navigation ******/
 .page-back {
-  position: absolute;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
   left: 0;
   top: 0;
   background-color: rgba(20,20,20,0.4);
@@ -15,7 +19,11 @@ p {
   width: 20px;
 }
 .page-forward {
-  position: absolute;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
   right: 0;
   top: 0;
   background-color: rgba(20,20,20,0.4);
