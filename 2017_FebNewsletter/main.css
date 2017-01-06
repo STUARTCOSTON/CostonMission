@@ -39,6 +39,10 @@ a:hover {
 }
 
 .page-forward {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   right: 0;
   top: 0;
