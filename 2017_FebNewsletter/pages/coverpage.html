@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -18,7 +18,7 @@
   <title> About Me </title>
 </head>
   
-<body style='background-color: #e1e1e1'>
+<body style='background-color: #e1e1e1' onmousemove='showNav()'>
   
   <!--<header id="header">
     <script type="text/javascript">
@@ -28,12 +28,12 @@
   
   <!--<nav id="nav">
     <a href='../pages/page2.html'>
-      <div class='page-back'>  
+      <div class='page-back' id='page-back'>  
         &#171;
       </div>
     </a>
     <a href='../pages/page1.html'>
-      <div class='page-forward'>   
+      <div class='page-forward' id='page-forward'>   
         &#187;
       </div>
     </a>   
@@ -124,6 +124,10 @@ $(document).on('swiperight', '.ui-page', function(event){
     }
     return false;            
 });
+    function showNav() {
+      document.getElementById(&quot;page-forward&quot;).style.right = &quot;0px&quot;;
+      document.getElementById(&quot;page-back&quot;).style.left = &quot;0px&quot;;
+    }
   </script>
 </body>
 </html>
