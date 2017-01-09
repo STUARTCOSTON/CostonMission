@@ -33,11 +33,12 @@ a:hover {
   align-items: center;
   justify-content: center;
   position: fixed;
-  left: 0;
+  left: -35px;
   top: 0;
   background-color: rgba(20,20,20,0.3);
   height: 100%;
   width: 35px;
+  transition: 0.4s;
 }
 
 .page-forward {
@@ -46,11 +47,12 @@ a:hover {
   align-items: center;
   justify-content: center;
   position: fixed;
-  right: 0;
+  right: -35px;
   top: 0;
   background-color: rgba(20,20,20,0.3);
   height: 100%;
   width: 35px;
+  transition: 0.4s;
 }
 
 nav a {
