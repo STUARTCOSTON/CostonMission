@@ -29,7 +29,7 @@
   <div data-role="page" id="article1">
     <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
       <script type="text/javascript">
-        $('#header').load('../header.html');
+        $.mobile.loadPage('../header.html');
       </script>
     </div>
     <a href='../pages/page2.html'>
@@ -46,7 +46,7 @@
       <p>Article 1</p>
     </div>
     <script type="text/javascript">
-      $('#footer').load('../footer.html');
+      $.mobile.loadPage('../footer.html',true);
     </script>  
   </div>
  
