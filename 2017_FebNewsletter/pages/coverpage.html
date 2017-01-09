@@ -20,13 +20,13 @@
   
 <body style='background-color: #e1e1e1'>
   
-  <header id="header">
+  <!--<header id="header">
     <script type="text/javascript">
       $('#header').load('../header.html');
     </script>
-  </header>
+  </header>-->
   
-  <nav id="nav">
+  <!--<nav id="nav">
     <a href='../pages/page2.html'>
       <div class='page-back'>  
         &#171;
@@ -37,10 +37,10 @@
         &#187;
       </div>
     </a>   
-  </nav>
+  </nav>-->
   
   <main>
-    <div data-role="page" id="coverPage">
+   <!-- <div data-role="page" id="coverPage">
       <h1>
         Cover Page
       </h1>
@@ -63,16 +63,42 @@
       <p>
         This is Page 2
       </p>
+    </div>-->
+    <div data-role="page" id="article1">
+    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+      <h1>Articles</h1>
+    </div>
+    <div data-role="content">
+      <p>Article 1</p>
+    </div>
+  </div>
+
+  <div data-role="page" id="article2">
+    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+      <a href="#article1" data-icon="home" data-iconpos="notext">Home</a>
+      <h1>Articles</h1>
+    </div>
+    <div data-role="content">
+      <p>Article 2</p>
+    </div>
+  </div>
+
+  <div data-role="page" id="article3">
+    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+      <a href="#article1" data-icon="home" data-iconpos="notext">Home</a>
+      <h1>Articles</h1>
+    </div>
+    <div data-role="content">
+      <p>Article 3</p>
+    </div>
     </div>
   </main>
   
-  <footer id="footer">
+ <!-- <footer id="footer">
     <script type="text/javascript">
       $('#footer').load('../footer.html');
     </script>   
-  </footer>
-  
-</body>
+  </footer>-->
   <script>
     $(document).on('swipeleft', '.ui-page', function(event){    
     if(event.handled !== true) // This will prevent event triggering more then once
@@ -99,4 +125,5 @@ $(document).on('swiperight', '.ui-page', function(event){
     return false;            
 });
   </script>
+</body>
 </html>
