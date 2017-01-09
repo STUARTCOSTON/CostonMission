@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../main.css" />
   
   <!-- Include jQuery Mobile stylesheets -->
-  <!--<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">-->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 
   <!-- Include the jQuery library -->
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -25,15 +25,13 @@
   <title> Coston Mission </title>
 </head>
   
-<body style='background-color: #e1e1e1'> <!--onmousemove='showNav()'>-->
-  
-  <header id="header">
-    <script type="text/javascript">
-      $('#header').load('../header.html');
-    </script>
-  </header>
-  
-  <nav id="nav">
+<body style='background-color: #e1e1e1'>
+  <div data-role="page" id="article1">
+    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+      <script type="text/javascript">
+        $('#header').load('../header.html');
+      </script>
+    </div>
     <a href='../pages/page2.html'>
       <div class='page-back' id='page-back'>  
         &#171;
@@ -43,46 +41,55 @@
       <div class='page-forward' id='page-forward'>   
         &#187;
       </div>
-    </a>   
-  </nav>
-
-  <main>
-    <div data-role="page" id="article1">
-      <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
-        <h1>Articles</h1>
-      </div>
-      <div data-role="content">
-        <p>Article 1</p>
-      </div>
+    </a> 
+    <div data-role="content">
+      <p>Article 1</p>
     </div>
-
-    <div data-role="page" id="article2">
-      <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
-        <a href="#article1" data-icon="home" data-iconpos="notext">Home</a>
-        <h1>Articles</h1>
-      </div>
-      <div data-role="content">
-        <p>Article 2</p>
-      </div>
-    </div>
-
-    <div data-role="page" id="article3">
-      <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
-        <a href="#article1" data-icon="home" data-iconpos="notext">Home</a>
-        <h1>Articles</h1>
-      </div>
-      <div data-role="content">
-        <p>Article 3</p>
-      </div>
-    </div>
-  </main>
-  
- <footer id="footer">
     <script type="text/javascript">
       $('#footer').load('../footer.html');
-    </script>   
-  </footer>
-  
+    </script>  
+  </div>
+ 
+  <div data-role="page" id="article2">
+    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+      <a href="#article1" data-icon="home" data-iconpos="notext">Home</a>
+      <script type="text/javascript">
+        $('#header').load('../header.html');
+      </script>
+    </div>
+    <a href='../pages/page2.html'>
+      <div class='page-back' id='page-back'>  
+        &#171;
+      </div>
+    </a>
+    <a href='../pages/page1.html'>
+      <div class='page-forward' id='page-forward'>   
+        &#187;
+      </div>
+    </a> 
+    <div data-role="content">
+      <p>Article 2</p>
+    </div>
+    <script type="text/javascript">
+      $('#footer').load('../footer.html');
+    </script> 
+  </div>
+
+  <div data-role="page" id="article3">
+    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+      <a href="#article1" data-icon="home" data-iconpos="notext">Home</a>
+      <script type="text/javascript">
+        $('#header').load('../header.html');
+      </script>
+    </div>
+    <div data-role="content">
+      <p>Article 3</p>
+    </div>
+    <script type="text/javascript">
+      $('#footer').load('../footer.html');
+    </script> 
+  </div>
+
   <script>
     $(document).on('swipeleft', '.ui-page', function(event){    
     if(event.handled !== true) // This will prevent event triggering more then once
