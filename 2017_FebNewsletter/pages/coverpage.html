@@ -7,9 +7,8 @@
   <meta author='Stu Coston'>
   <meta charset="UTF-8">
   
+  <!-- Include Newsletter stylesheets -->
   <link rel="stylesheet" href="../main.css" />
-  <!--<link rel="next" title="Page 1" href="../pages/page1.html" />
-  <link rel="prev" title="Page 2" href="../pages/page2.html" />-->
   
   <!-- Include jQuery Mobile stylesheets -->
   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
@@ -20,22 +19,21 @@
   <!-- Include the jQuery Mobile library -->
   <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   
+  <!--Ajax libs counteract the jQuery libs for some reason ... commented them out for now -->
   <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
-  <!--<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>-->
-  <!--<script type="text/javascript" src="CostonMission/js/spn.js"></script>-->
   
-  <title> About Me </title>
+  <title> Coston Mission </title>
 </head>
   
 <body style='background-color: #e1e1e1'> <!--onmousemove='showNav()'>-->
   
-  <!--<header id="header">
+  <header id="header">
     <script type="text/javascript">
       $('#header').load('../header.html');
     </script>
-  </header>-->
+  </header>
   
-  <!--<nav id="nav">
+  <nav id="nav">
     <a href='../pages/page2.html'>
       <div class='page-back' id='page-back'>  
         &#171;
@@ -46,66 +44,45 @@
         &#187;
       </div>
     </a>   
-  </nav>-->
-  
-   <!-- <div data-role="page" id="coverPage">
-      <h1>
-        Cover Page
-      </h1>
-      <p>
-        This is the Cover Page
-      </p>
-    </div>
-    <div data-role="page" id="page1">
-      <h1>
-        Page 1
-      </h1>
-      <p>
-        This is Page 1
-      </p>
-    </div>
-    <div data-role="page" id="page2">
-      <h1>
-        Page 2
-      </h1>
-      <p>
-        This is Page 2
-      </p>
-    </div>-->
+  </nav>
+
+  <main>
     <div data-role="page" id="article1">
-    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
-      <h1>Articles</h1>
+      <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+        <h1>Articles</h1>
+      </div>
+      <div data-role="content">
+        <p>Article 1</p>
+      </div>
     </div>
-    <div data-role="content">
-      <p>Article 1</p>
-    </div>
-  </div>
 
-  <div data-role="page" id="article2">
-    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
-      <a href="#article1" data-icon="home" data-iconpos="notext">Home</a>
-      <h1>Articles</h1>
+    <div data-role="page" id="article2">
+      <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+        <a href="#article1" data-icon="home" data-iconpos="notext">Home</a>
+        <h1>Articles</h1>
+      </div>
+      <div data-role="content">
+        <p>Article 2</p>
+      </div>
     </div>
-    <div data-role="content">
-      <p>Article 2</p>
-    </div>
-  </div>
 
-  <div data-role="page" id="article3">
-    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
-      <a href="#article1" data-icon="home" data-iconpos="notext">Home</a>
-      <h1>Articles</h1>
+    <div data-role="page" id="article3">
+      <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+        <a href="#article1" data-icon="home" data-iconpos="notext">Home</a>
+        <h1>Articles</h1>
+      </div>
+      <div data-role="content">
+        <p>Article 3</p>
+      </div>
     </div>
-    <div data-role="content">
-      <p>Article 3</p>
-    </div>
-    </div>
+  </main>
   
- <!-- <footer id="footer">
+ <footer id="footer">
     <script type="text/javascript">
       $('#footer').load('../footer.html');
     </script>   
-  </footer>-->
+  </footer>
+  
   <script>
     $(document).on('swipeleft', '.ui-page', function(event){    
     if(event.handled !== true) // This will prevent event triggering more then once
