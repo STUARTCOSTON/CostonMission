@@ -1,3 +1,21 @@
+/******* Libs Override *******/
+element.style {
+  min-height: 0;
+}
+
+@media screen and (orientation: portrait) .ui-mobile .ui-page {
+  min-height: 0;
+}
+
+.ui-mobile [data-role=page], .ui-mobile [data-role=dialog], .ui-page {
+  min-height: 0;
+  position: relative;
+}
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+  background-color: transparent;
+}
+
 /******* General *******/
 #header {
   color: #777;
