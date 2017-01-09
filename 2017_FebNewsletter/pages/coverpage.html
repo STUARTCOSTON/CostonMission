@@ -12,7 +12,7 @@
   <link rel="prev" title="Page 2" href="../pages/page2.html" />
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script type="text/javascript" src="CostonMission/js/spn.js"></script>
+  <!--<script type="text/javascript" src="CostonMission/js/spn.js"></script>-->
   
   <title> About Me </title>
 </head>
@@ -39,18 +39,31 @@
   </nav>
   
   <main>
-    <h1>
-      Cover Page
-    </h1>
-    <p>
-      This is the Cover Page
-    </p>
-    <a href='CostonMission/js/spn.js'>
-        JS Test Link
-    </a>
+    <div data-role="page" id="coverPage">
+      <h1>
+        Cover Page
+      </h1>
+      <p>
+        This is the Cover Page
+      </p>
+    </div>
+    <div data-role="page" id="page1">
+      <h1>
+        Page 1
+      </h1>
+      <p>
+        This is Page 1
+      </p>
+    </div>
+    <div data-role="page" id="page2">
+      <h1>
+        Page 2
+      </h1>
+      <p>
+        This is Page 2
+      </p>
+    </div>
   </main>
-  
-    This is the content of the page
   
   <footer id="footer">
     <script type="text/javascript">
@@ -59,4 +72,30 @@
   </footer>
   
 </body>
+  <script>
+    $(document).on('swipeleft', '.ui-page', function(event){    
+    if(event.handled !== true) // This will prevent event triggering more then once
+    {    
+        var nextpage = $.mobile.activePage.next('[data-role="page"]');
+        // swipe using id of next page if exists
+        if (nextpage.length > 0) {
+            $.mobile.changePage(nextpage, {transition: "slide", reverse: false}, true, true);
+        }
+        event.handled = true;
+    }
+    return false;         
+});
+
+$(document).on('swiperight', '.ui-page', function(event){     
+    if(event.handled !== true) // This will prevent event triggering more then once
+    {      
+        var prevpage = $(this).prev('[data-role="page"]');
+        if (prevpage.length > 0) {
+            $.mobile.changePage(prevpage, {transition: "slide", reverse: true}, true, true);
+        }
+        event.handled = true;
+    }
+    return false;            
+});
+  </script>
 </html>
