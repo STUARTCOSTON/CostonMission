@@ -26,89 +26,46 @@
 </head>
   
 <body style='background-color: #e1e1e1'>
+  <!-- header -->
+  <div data-role="header" data-theme="b" data-position="fixed" data-id="footer" data-class='header'>
+    <p>
+      www.costonmission.com
+    </p>
+  </div>
+  
+  <!-- content -->
+  <!-- page 1 -->
   <div data-role="page" id="article1">
-    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
-      <script type="text/javascript">
-        $.mobile.loadPage('../header.html');
-      </script>
-      <div class='header' id='header'>
-        <p>
-          www.costonmission.com
-        </p>
-      </div>
-    </div>
-    <a href='../pages/page2.html'>
-      <div class='page-back' id='page-back'>  
-        &#171;
-      </div>
-    </a>
-    <a href='../pages/page1.html'>
-      <div class='page-forward' id='page-forward'>   
-        &#187;
-      </div>
-    </a> 
     <div data-role="content">
       <p>Article 1</p>
-    </div>
-    <script type="text/javascript">
-      $.mobile.loadPage('../footer.html',true);
-    </script>
-    <div id="footer" data-id="footer" data-position="fixed" data-fullscreen="true" data-tap-toggle="false" role="contentinfo" class="ui-footer ui-footer-fullscreen ui-bar-b ui-footer-fixed slideup">
-      <div data-role="controlgroup" class="control ui-btn-left ui-controlgroup ui-controlgroup-horizontal ui-corner-all ui-mini" data-type="horizontal" data-mini="true">
-        <div class="ui-controlgroup-controls ">
-          <a href="#" class="prev ui-btn ui-btn-icon-notext ui-icon-carat-l ui-state-disabled ui-first-child">Previous</a>
-          <a href="#" class="next ui-btn ui-btn-icon-notext ui-icon-carat-r ui-last-child">Next</a>
-        </div>
-      </div>
-    </div>
+    </div>    
   </div>
  
+  <!-- page 2 -->
   <div data-role="page" id="article2">
-    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
-      <a href="#article1" data-icon="home" data-iconpos="notext">Home</a>
-      <script type="text/javascript">
-        $('#header').load('../header.html');
-      </script>
-    </div>
-    <a href='../pages/page2.html'>
-      <div class='page-back' id='page-back'>  
-        &#171;
-      </div>
-    </a>
-    <a href='../pages/page1.html'>
-      <div class='page-forward' id='page-forward'>   
-        &#187;
-      </div>
-    </a> 
+    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer"></div>
     <div data-role="content">
       <p>Article 2</p>
     </div>
-    <script type="text/javascript">
-      $('#footer').load('../footer.html');
-    </script> 
-    <div id="footer" data-id="footer" data-position="fixed" data-fullscreen="true" data-tap-toggle="false" role="contentinfo" class="ui-footer ui-footer-fullscreen ui-bar-b ui-footer-fixed slideup">
-      <div data-role="controlgroup" class="control ui-btn-left ui-controlgroup ui-controlgroup-horizontal ui-corner-all ui-mini" data-type="horizontal" data-mini="true">
-        <div class="ui-controlgroup-controls ">
-          <a href="#" class="prev ui-btn ui-btn-icon-notext ui-icon-carat-l ui-state-disabled ui-first-child">Previous</a>
-          <a href="#" class="next ui-btn ui-btn-icon-notext ui-icon-carat-r ui-last-child">Next</a>
-        </div>
-      </div>
-    </div>
   </div>
 
+  <!-- page 3 -->
   <div data-role="page" id="article3">
     <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
-      <a href="#article1" data-icon="home" data-iconpos="notext">Home</a>
-      <script type="text/javascript">
-        $('#header').load('../header.html');
-      </script>
     </div>
     <div data-role="content">
       <p>Article 3</p>
     </div>
-    <script type="text/javascript">
-      $('#footer').load('../footer.html');
-    </script> 
+  </div>
+  
+  <!-- footer -->
+  <div id="footer" data-id="footer" data-position="fixed" data-fullscreen="true" data-tap-toggle="false" role="contentinfo" class="ui-footer ui-footer-fullscreen ui-bar-b ui-footer-fixed slideup">
+    <div data-role="controlgroup" class="control ui-btn-left ui-controlgroup ui-controlgroup-horizontal ui-corner-all ui-mini" data-type="horizontal" data-mini="true">
+      <div class="ui-controlgroup-controls ">
+        <a href="#" class="prev ui-btn ui-btn-icon-notext ui-icon-carat-l ui-state-disabled ui-first-child">Previous</a>
+        <a href="#" class="next ui-btn ui-btn-icon-notext ui-icon-carat-r ui-last-child">Next</a>
+      </div>
+    </div>
   </div>
 
   <script>
