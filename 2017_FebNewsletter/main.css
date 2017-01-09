@@ -1,39 +1,22 @@
-/******* Libs Override *******/
-element.style {
-  min-height: 0;
+/******* jQuery Coston Mission Theme  *******/
+.ui-bar-h {
+  color:#171717;
+  background-color: rgba(20,20,20,0.3);
 }
 
-@media screen and (orientation: portrait) .ui-mobile .ui-page {
-  min-height: 0;
-}
-
-.ui-mobile [data-role=page], .ui-mobile [data-role=dialog], .ui-page {
-  min-height: 0;
-  position: relative;
-}
-
-.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+.ui-page-c {
+  color: #fff;
   background-color: transparent;
 }
 
-/******* General *******/
-#header {
-  color: #777;
-  background-color: rgba(255,255,255,0);
-}
-
-main {
-  color: #fff;
-}
-
-footer {
+.ui-bar-f {
   color: #fff;
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
   height: 40px;
   padding: 0px 50px;
+  vertical-align: middle;
 }
 
 a {
