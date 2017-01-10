@@ -9,20 +9,10 @@
   <meta author='Stu Coston'>
   <meta charset="UTF-8">
   
-  <!-- Include jQuery Mobile stylesheets -->
-  <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
-  <link rel="stylesheet" href="../2017_FebNewsletter/main.css"/>
-  
-  <!-- Include Newsletter stylesheets -->
-  <!--<link rel="stylesheet" href="../main.css" />-->
-
-  <!-- Include the jQuery library -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-  <!-- Include the jQuery Mobile library -->
   <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-  
-  <script>
+  <script> //because of what I intend to use this site for, I want the script to load before the page content
 // next page swipe function
 $(document).on('swipeleft', '.ui-page', function(event){    
   if(event.handled !== true) // This will prevent event triggering more then once
@@ -49,81 +39,89 @@ $(document).on('swiperight', '.ui-page', function(event){
   }
   return false;            
 });
-
-// next page tap function
-//$(document).on('pagecreate','.ui-page',function(){
-//  $("button").on('tap', '#pagenext', function(event){        
-//    var nextpage = $.mobile.activePage.next('[data-role="page"]');
-    // change page using id of next page if exists
-//    if (nextpage.length > 0) {
-//       $.mobile.changePage(nextpage, {transition: "slide", reverse: false}, true, true);
-//    }
-//  }
-//});
-
-// prev page tap function
-//$(document).on('tap', '#pageprev', function(event){     
-//  if(event.handled !== true) // This will prevent event triggering more then once
-//  {      
-//    var prevpage = $(this).prev('[data-role="page"]');
-//    if (prevpage.length > 0) {
-//      $.mobile.changePage(prevpage, {transition: "slide", reverse: true}, true, true);
-//    }
-//    event.handled = true;
-//  }
-//  return false;            
-//});
-  </script>
-  
-  <!-- Not including Ajax lib unless I need it later -->
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
-  
+</script>
 </head>
-  
-<body style='background-color: #e1e1e1'>
-  <!-- header -->
-  <div data-role="header" data-position='fixed' data-fullscreen='true' data-theme='a' data-id="header">
-    <a style='text-align: center; z-index: 10;' href='www.costonmission.com'>
-      www.CostonMission.com
-    </a>
-  </div>
-  
-  <!-- content -->
-  <!-- page 1 -->
-  <div data-role="page" id="article1">
-    <div data-role="content">
-      <p>Article 1</p>
-    </div>    
-  </div>
- 
-  <!-- page 2 -->
-  <div data-role="page" data-theme='c' id="article2">
-    <div data-role="content">
-      <p>Article 2</p>
-    </div>
-  </div>
+<body>
 
-  <!-- page 3 -->
-  <div data-role="page" data-theme='c' id="article3">
-    <div data-role="content">
-      <p>
-        Article 3
-      </p>
-    </div>
+<!-- page 1 -->
+<div data-role="page" id="page1">
+
+  <!-- page 1 header -->
+  <div data-role="header" data-theme='c' data-position='fixed' id="header">
+    <p style='text-align: center;'>www.CostonMission.com</p>
   </div>
   
-  <!-- footer -->
-  <div data-role="footer" data-position='fixed' data-fullscreen='true' data-id="footer" data-theme='c' class='ui-grid-a ui-bar'>
+  <!-- page 1 content -->
+  <div data-role="content">
+    <p>Page 1</p>
+  </div>
+  
+  <!-- page 1 footer -->
+  <div data-role="footer" data-position='fixed' data-theme='c' data-fullscreen='true' data-id="footer" class='ui-grid-a ui-bar'>
     <div class='ui-block-a'>
       <div data-role="controlgroup" data-type="horizontal"> 
-        <button class='ui-btn ui-icon-arrow-l ui-icon-notext' data-id='pageprev'></button>
-        <button class='ui-btn ui-icon-arrow-r ui-icon-notext' data-id='pagenext'></button>
+        <a href='#page1' class='ui-btn ui-icon-arrow-l' data-transition='slide' data-direction='reverse'></a>
+        <a href='#page2' class='ui-btn ui-icon-arrow-r' data-transition='slide'></a>
       </div>
     </div>
     <div class='ui-block-b'>
       <p style='text-align: right'>How to live like Jesus today and make disciples of all nations</p>
     </div>
   </div>
+  
+</div>
+
+<!-- page 2 -->
+<div data-role="page" id="page2">
+
+  <!-- page 2 header -->
+  <div data-role="header" data-theme='c' data-position='fixed' id="header">
+    <p style='text-align: center;'>www.CostonMission.com</p>
+  </div>
+  
+  <!-- page 2 content -->
+  <div data-role="content">
+    <p>Page 2</p>
+  </div>
+  
+  <!-- page 2 footer -->
+  <div data-role="footer" data-position='fixed' data-theme='c' data-fullscreen='true' data-id="footer" class='ui-grid-a ui-bar'>
+    <div class='ui-block-a'>
+      <div data-role="controlgroup" data-type="horizontal"> 
+        <a href='#page1' class='ui-btn ui-icon-arrow-l' data-transition='slide' data-direction='reverse'></a>
+        <a href='#page3' class='ui-btn ui-icon-arrow-r' data-transition='slide'></a>
+      </div>
+    </div>
+    <div class='ui-block-b'>
+      <p style='text-align: right'>How to live like Jesus today and make disciples of all nations</p>
+    </div>
+  </div>
+  
+</div>
+
+<!-- page 3 -->
+<div data-role="page" data-theme='c' id="page3">
+  <div data-role="content">
+    <p>
+      Article 3
+    </p>
+  </div>
+</div>
+
+<!-- page 4 -->
+<div data-role="page" id="page4">
+  <div data-role="main" class="ui-content">
+    <p>An example of the "arrow pointing left icon" in different buttons.</p>
+    <a href="#" class="ui-btn ui-icon-arrow-l ui-btn-icon-left">Left Arrow Anchor</a>
+    <div data-role="controlgroup" data-type="horizontal">
+    <button class="ui-btn ui-icon-arrow-l ui-btn-icon-left">Left Arrow Button</button>
+      <button class="ui-btn ui-icon-arrow-l ui-btn-icon-left">Left Arrow Button</button>
+      <input type="button" data-icon="arrow-l" value="Left Arrow Input Button">
+    </div>
+    <p>Only the icon:</p>
+    <a href="#" class="ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-notext">Left Arrow Icon</a>
+  </div>
+</div>
 
 </body>
 </html>
