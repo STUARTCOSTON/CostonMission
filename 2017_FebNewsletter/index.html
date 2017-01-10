@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title> Coston Mission </title>
+  
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name='description' content='Coston Mission Newsletter - February 2017'>
   <meta name='keywords' content='Coston,Mission,CostonMission,Newsletter,Family,Christian,Disciples,Disciple'>
@@ -19,20 +21,70 @@
   <!-- Include the jQuery Mobile library -->
   <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   
-  <!--Ajax libs counteract the jQuery libs for some reason ... commented them out for now -->
+  <script>
+// next page swipe function
+$(document).on('swipeleft', '.ui-page', function(event){    
+    if(event.handled !== true) // This will prevent event triggering more then once
+    {    
+        var nextpage = $.mobile.activePage.next('[data-role="page"]');
+        // swipe using id of next page if exists
+        if (nextpage.length > 0) {
+            $.mobile.changePage(nextpage, {transition: "slide", reverse: false}, true, true);
+        }
+        event.handled = true;
+    }
+    return false;         
+});
+
+// prev page swipe function
+$(document).on('swiperight', '.ui-page', function(event){     
+    if(event.handled !== true) // This will prevent event triggering more then once
+    {      
+        var prevpage = $(this).prev('[data-role="page"]');
+        if (prevpage.length > 0) {
+            $.mobile.changePage(prevpage, {transition: "slide", reverse: true}, true, true);
+        }
+        event.handled = true;
+    }
+    return false;            
+});
+
+// next page tap function
+$(document).on('tap', '#pagenext', function(event){    
+    if(event.handled !== true) // This will prevent event triggering more then once
+    {    
+        var nextpage = $.mobile.activePage.next('[data-role="page"]');
+        // swipe using id of next page if exists
+        if (nextpage.length > 0) {
+            $.mobile.changePage(nextpage, {transition: "slide", reverse: false}, true, true);
+        }
+        event.handled = true;
+    }
+    return false;         
+});
+
+// prev page swipe function
+$(document).on('tap', '#pageprev', function(event){     
+    if(event.handled !== true) // This will prevent event triggering more then once
+    {      
+        var prevpage = $(this).prev('[data-role="page"]');
+        if (prevpage.length > 0) {
+            $.mobile.changePage(prevpage, {transition: "slide", reverse: true}, true, true);
+        }
+        event.handled = true;
+    }
+    return false;            
+});
+  </script>
+  
+  <!-- Not including Ajax lib unless I need it later -->
   <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
   
-  <title> Coston Mission </title>
 </head>
   
 <body style='background-color: #e1e1e1'>
   <!-- header -->
-  <div data-role="header" data-theme="h" data-id="header">
-    <p>
-      www.costonmission.com
-    </p>
-  </div>
-  <div class='header'>
+  <div data-role="header" data-theme="d" data-id="header">
     <p>
       www.costonmission.com
     </p>
@@ -63,62 +115,19 @@
   </div>
   
   <!-- footer -->
-  <div data-role="footer" data-theme="f" data-id="footer">
+  <div data-role="footer" data-theme="d" data-id="footer">
     <div style='width: 40%;'>
       <p style='text-align: right'>How to live like Jesus today and make disciples of all nations</p>
     </div>
     <div> 
-      <div style='width: 10%;' onclick='$.mobile.changePage(prevpage, {transition: "slide", reverse: true}, true, true);'>
+      <div style='width: 10%;' data-id='pageprev'>
         <p>&#8592;</p>
       </div>
-      <div style='width: 10%;' onclick='$.mobile.changePage(nextpage, {transition: "slide", reverse: false}, true, true);'>
-        <p>&#8594;</p>
-      </div>
-    </div>
-  </div>
-  <div class='footer'>
-    <div style='width: 40%;'>
-      <p style='text-align: right'>How to live like Jesus today and make disciples of all nations</p>
-    </div>
-    <div style='display: inline'> 
-      <div style='width: 10%;' onclick='$.mobile.changePage(prevpage, {transition: "slide", reverse: true}, true, true);'>
-        <p>&#8592;</p>
-      </div>
-      <div style='width: 10%;' onclick='$.mobile.changePage(nextpage, {transition: "slide", reverse: false}, true, true);'>
+      <div style='width: 10%;' data-id='pagenext'>
         <p>&#8594;</p>
       </div>
     </div>
   </div>
 
-  <script>
-    $(document).on('swipeleft', '.ui-page', function(event){    
-    if(event.handled !== true) // This will prevent event triggering more then once
-    {    
-        var nextpage = $.mobile.activePage.next('[data-role="page"]');
-        // swipe using id of next page if exists
-        if (nextpage.length > 0) {
-            $.mobile.changePage(nextpage, {transition: "slide", reverse: false}, true, true);
-        }
-        event.handled = true;
-    }
-    return false;         
-});
-
-$(document).on('swiperight', '.ui-page', function(event){     
-    if(event.handled !== true) // This will prevent event triggering more then once
-    {      
-        var prevpage = $(this).prev('[data-role="page"]');
-        if (prevpage.length > 0) {
-            $.mobile.changePage(prevpage, {transition: "slide", reverse: true}, true, true);
-        }
-        event.handled = true;
-    }
-    return false;            
-});
-//    function showNav() {
-//      document.getElementById(&quot;page-forward&quot;).style.right = &quot;35px&quot;;
-//      document.getElementById(&quot;page-back&quot;).style.left = &quot;35px&quot;;
-//    }
-  </script>
 </body>
 </html>
