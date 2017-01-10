@@ -1,5 +1,5 @@
 /******* jQuery Coston Mission Theme  *******/
-.ui-bar-h {
+.ui-header, .ui-bar-h {
   color:#171717;
   background-color: rgba(20,20,20,0.3);
   width: 100%;
@@ -12,7 +12,7 @@
   height: 100%;
 }
 
-footer {
+.ui-footer {
   display: flex;!important
   align-items: center;!important
   align-content: center;!important
