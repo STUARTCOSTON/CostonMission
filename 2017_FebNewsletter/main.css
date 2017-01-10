@@ -1,4 +1,12 @@
 /******* jQuery Coston Mission Theme  *******/
+.ui-bar-d, .ui-page-d, .ui-content-d, {
+  color: #171717;
+}
+
+.ui-bar-l, .ui-page-l, .ui-content-l, {
+  color: #fff;
+}
+
 .header, .ui-header, .ui-bar-h {
   color:#171717;
   background-color: rgba(20,20,20,0.3);
