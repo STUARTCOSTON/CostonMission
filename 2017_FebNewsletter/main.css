@@ -13,17 +13,17 @@
 }
 
 .ui-bar-f {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between;
+  display: flex;!important
+  align-items: center;!important
+  align-content: center;!important
+  justify-content: space-between;!important
   color: #fff;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 40px;
-  padding: 0px 5%;
-  vertical-align: middle;
+  position: fixed;!important
+  bottom: 0;!important
+  left: 0;!important
+  height: 40px;!important
+  padding: 0px 5%;!important
+  vertical-align: middle;!important
 }
 
 a {
