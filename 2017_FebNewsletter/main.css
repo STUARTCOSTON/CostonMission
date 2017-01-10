@@ -12,11 +12,18 @@
   height: 100%;
 }
 
-.ui-bar-f {
+footer {
   display: flex;!important
   align-items: center;!important
   align-content: center;!important
   justify-content: space-between;!important
+}
+
+.ui-bar-f {
+  /*display: flex;!important
+  align-items: center;!important
+  align-content: center;!important
+  justify-content: space-between;!important*/
   color: #fff;
   position: fixed;!important
   bottom: 0;!important
