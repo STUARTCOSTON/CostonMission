@@ -7,10 +7,9 @@
   <meta author='Stu Coston'>
   <meta charset="UTF-8">
   
-  
-  
   <!-- Include jQuery Mobile stylesheets -->
   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  
   <!-- Include Newsletter stylesheets -->
   <link rel="stylesheet" href="../main.css" />
 
@@ -29,6 +28,11 @@
 <body style='background-color: #e1e1e1'>
   <!-- header -->
   <div data-role="header" data-theme="h" data-id="header">
+    <p>
+      www.costonmission.com
+    </p>
+  </div>
+  <div class='header'>
     <p>
       www.costonmission.com
     </p>
@@ -59,7 +63,7 @@
   </div>
   
   <!-- footer -->
-  <footer data-role="footer" data-theme="f" data-id="footer">
+  <div data-role="footer" data-theme="f" data-id="footer">
     <div style='width: 40%;'>
       <p style='text-align: right'>How to live like Jesus today and make disciples of all nations</p>
     </div>
@@ -71,7 +75,20 @@
         <p>&#8594;</p>
       </div>
     </div>
-  </footer>
+  </div>
+  <div class='footer'>
+    <div style='width: 40%;'>
+      <p style='text-align: right'>How to live like Jesus today and make disciples of all nations</p>
+    </div>
+    <div> 
+      <div style='width: 10%;' onclick='$.mobile.changePage(prevpage, {transition: "slide", reverse: true}, true, true);'>
+        <p>&#8592;</p>
+      </div>
+      <div style='width: 10%;' onclick='$.mobile.changePage(nextpage, {transition: "slide", reverse: false}, true, true);'>
+        <p>&#8594;</p>
+      </div>
+    </div>
+  </div>
 
   <script>
     $(document).on('swipeleft', '.ui-page', function(event){    
