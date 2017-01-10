@@ -62,8 +62,13 @@
     <div style='width: 40%;'>
       <p style='text-align: right'>How to live like Jesus today and make disciples of all nations</p>
     </div>
-    <div style='width: 10%;'>
-      <p style='text-align: left'>other footer text here</p>
+    <div> 
+      <div style='width: 10%;' onclick='$.mobile.changePage(prevpage, {transition: "slide", reverse: true}, true, true);'>
+        <p>&#8592;</p>
+      </div>
+      <div style='width: 10%;' onclick='$.mobile.changePage(nextpage, {transition: "slide", reverse: false}, true, true);'>
+        <p>&#8594;</p>
+      </div>
     </div>
   </footer>
 
