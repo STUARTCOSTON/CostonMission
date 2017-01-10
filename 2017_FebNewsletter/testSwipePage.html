@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title> Coston Mission </title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name='description' content='Coston Mission Newsletter - February 2017'>
+  <meta name='keywords' content='Coston,Mission,CostonMission,Newsletter,Family,Christian,Disciples,Disciple'>
+  <meta author='Stu Coston'>
+  <meta charset="UTF-8">
+  
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  
+</head>
+  
+<body>
+  <!-- header -->
+  <div data-role="header" data-position='fixed' data-fullscreen='true' id="header">
+      www.CostonMission.com
+  </div>
+  
+  <!-- content -->
+  <!-- page 1 -->
+  <div data-role="page" id="page1">
+    <div data-role="content">
+      <p>Page 1</p>
+    </div>    
+  </div>
+ 
+  <!-- page 2 -->
+  <div data-role="page" data-theme='c' id="page2">
+    <div data-role="content">
+      <p>Page 2</p>
+    </div>
+  </div>
+
+  <!-- page 3 -->
+  <div data-role="page" data-theme='c' id="page3">
+    <div data-role="content">
+      <p>Page 3</p>
+    </div>
+  </div>
+  
+  <!-- footer -->
+  <div data-role="footer" data-position='fixed' data-fullscreen='true' data-id="footer" data-theme='c' class='ui-grid-a ui-bar'>
+    <div class='ui-block-a'>
+      <div data-role="controlgroup" data-type="horizontal"> 
+        <button class='ui-btn ui-icon-arrow-l ui-icon-notext' data-id='pageprev'></button>
+        <button class='ui-btn ui-icon-arrow-r ui-icon-notext' data-id='pagenext'></button>
+      </div>
+    </div>
+    <div class='ui-block-b'>
+      <p style='text-align: right'>How to live like Jesus today and make disciples of all nations</p>
+    </div>
+  </div>
+
+  <script>
+// next page swipe function
+$(document).on('swipeleft', '.ui-page', function(event){    
+  if(event.handled !== true) // This will prevent event triggering more then once
+  {    
+    var nextpage = $.mobile.activePage.next('[data-role="page"]');
+    // swipe using id of next page if exists
+    if (nextpage.length > 0) {
+      $.mobile.changePage(nextpage, {transition: "slide", reverse: false}, true, true);
+    }
+    event.handled = true;
+  }
+  return false;         
+});
+// prev page swipe function
+$(document).on('swiperight', '.ui-page', function(event){     
+  if(event.handled !== true) // This will prevent event triggering more then once
+  {      
+    var prevpage = $(this).prev('[data-role="page"]');
+    if (prevpage.length > 0) {
+      $.mobile.changePage(prevpage, {transition: "slide", reverse: true}, true, true);
+    }
+    event.handled = true;
+  }
+  return false;            
+});
+  </script>
+
+</body>
+</html>
