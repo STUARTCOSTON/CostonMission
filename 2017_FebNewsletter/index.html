@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
   
   <!-- Include Newsletter stylesheets -->
-  <link rel="stylesheet" href="../main.css" />
+  <!--<link rel="stylesheet" href="../main.css" />-->
 
   <!-- Include the jQuery library -->
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -51,7 +51,7 @@ $(document).on('swiperight', '.ui-page', function(event){
 
 // next page tap function
 $(document).on('pagecreate','.ui-page',function(){
-  $("div").on('tap', '#pagenext', function(event){        
+  $("button").on('tap', '#pagenext', function(event){        
     var nextpage = $.mobile.activePage.next('[data-role="page"]');
     // change page using id of next page if exists
     if (nextpage.length > 0) {
