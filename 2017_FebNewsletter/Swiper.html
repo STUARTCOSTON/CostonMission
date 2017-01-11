@@ -7,7 +7,10 @@
   <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100,300,400,500,600,700,900" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
 
-<style>  
+<style>
+  .theme-font {
+    font-family: 'Libre Franklin', sans-serif;
+  }
   .flex-center {
     display: flex;
     align-content: center;
@@ -23,23 +26,64 @@
     height: 85vh;
   }  
   /****** positions ******/
-  .center {
-    font-family: 'Libre Franklin', sans-serif;
-    width: 100%;
+  .text-center {
     text-align: center;  
   }
-  .bottom {
-    font-family: 'Libre Franklin', sans-serif;
-    position: absolute;
-    bottom: 0;
-    height: 30px;
-  } 
-  .top {
-    font-family: 'Libre Franklin', sans-serif;
-    position: absolute;
-    top: 0;
-    height: 30px;
-  } 
+  .display-topleft {
+    position:absolute;
+    left:0;
+    top:0
+  }
+  .display-topright {
+    position:absolute;
+    right:0;
+    top:0
+  }
+  .display-bottomleft {
+    position:absolute;
+    left:0;
+    bottom:0
+  }
+  .display-bottomright {
+    position:absolute;
+    right:0;
+    bottom:0
+  }
+  .display-middle {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%)
+  }
+  .display-left {
+    position:absolute;
+    top:50%;
+    left:0%;
+    transform:translate(0%,-50%);
+    -ms-transform:translate(-0%,-50%)
+  }
+  .display-right {
+    position:absolute;
+    top:50%;
+    right:0%;
+    transform:translate(0%,-50%);
+    -ms-transform:translate(0%,-50%)
+  }
+  .display-topmiddle {
+    position:absolute;
+    left:50%;
+    top:0;
+    transform:translate(-50%,0%);
+    -ms-transform:translate(-50%,0%)
+  }
+  .display-bottommiddle {
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform:translate(-50%,0%);
+    -ms-transform:translate(-50%,0%)
+  }
   /******* sizes ******/
   .full-width {
     width: 100%;
@@ -47,15 +91,65 @@
   .full-height {
     height: 100%;
   }
+  .half {
+    float:left;width:100%
+  }
+  @media only screen and (min-width:601px){
+    .half {
+      width:49.99999%
+    }
+  }
+ 
   /******* paddings ******/
-  .pad-small {
-    padding: 5px;
+  .padding-4 {
+    padding-top:4px!important;
+    padding-bottom:4px!important;
   }
-  .pad-med {
-    padding: 15px;
+  .padding-8 {
+    padding-top:8px!important;
+    padding-bottom:8px!important;
   }
-  .pad-large {
-    padding: 30px;
+  .padding-12 {
+    padding-top:12px!important;
+    padding-bottom:12px!important;
+  }
+  .padding-16 {
+    padding-top:16px!important;
+    padding-bottom:16px!important;
+  }
+  .padding-24 {
+    padding-top:24px!important;
+    padding-bottom:24px!important;
+  }
+  .padding-32 {
+    padding-top:32px!important;
+    padding-bottom:32px!important;
+  }
+  .padding-48 {
+    padding-top:48px!important;
+    padding-bottom:48px!important;
+  }
+  .padding-64 {
+    padding-top:64px!important;
+    padding-bottom:64px!important;
+  }
+  .padding-128 {
+    padding-top:128px!important;
+    padding-bottom:128px!important;
+  }
+  .padding-0 {
+    padding:0!important;
+  }
+  .padding-top {
+    padding-top:8px!important}
+  .padding-bottom{
+    padding-bottom:8px!important;
+  }
+  .padding-left {
+    padding-left:16px!important;
+  }
+  .padding-right {
+    padding-right:16px!important;
   }
   /****** colors ******/
   .text-white {
@@ -100,21 +194,37 @@
 <body class='flex-center container-black'>
   <!-- Slider main container -->
   <div class="swiper-container">
-  <header class='top center pad-med' style='z-index: 10;'><a href='www.costonmision.com' class='text-white'>www.CostonMission.com</a></header>
+  <header class='display-topmiddle pad-med' style='z-index: 10;'><a href='www.costonmision.com' class='text-white'>www.CostonMission.com</a></header>
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
       <div class="swiper-slide full-height full-width bgimg1">
-        <div class='center bottom white'>Slide 1</div>
+        <div class='display-centerbottom white'>Cover</div>
+      </div>
+      <div class="swiper-slide full-height full-width container-black">
+        <div class='half'>
+          <p>Thanksgiving information and text to make sure that everything is awesome.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class='half'>
+          <p>Thanksgiving information and text to make sure that everything is awesome.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class='display-centerbottom white'>Inside Cover - Magazine purpose overview</div>
       </div>
       <div class="swiper-slide full-width full-height container-black">
-        <div class='center bottom white'>Slide 2</div>
+        <div class='display-centerbottom white'>Holidays</div>
+      </div>
+      <div class="swiper-slide full-width full-height container-black">
+        <div class='display-centerbottom white'>Holidays</div>
       </div>
       <div class="swiper-slide full-height full-width bgimg2">
-        <div class='center bottom white'>Slide 3</div>
+        <div class='display-centerbottom white'>Slide 3</div>
       </div>
       <div class="swiper-slide full-width full-height container-white">
-        <div class='center bottom white'>Slide 4</div>
+        <div class='display-centerbottom white'>Slide 4</div>
       </div>
     </div>
     
