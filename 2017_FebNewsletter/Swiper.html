@@ -21,6 +21,7 @@
     max-width: 800px;
     height: 85vh;
   }  
+  /****** positions ******/
   .center {
     text-align: center;  
   }
@@ -34,12 +35,14 @@
     top: 0;
     height: 30px;
   } 
+  /******* sizes ******/
   .full-width {
     width: 100%;
   }
   .full-height {
     height: 100%;
   }
+  /******* paddings ******/
   .pad-small {
     padding: 5px;
   }
@@ -49,24 +52,58 @@
   .pad-large {
     padding: 30px;
   }
+  /****** colors ******/
+  .text-white {
+    color: #fff;
+  }
+  .text-black {
+    color: #171717;
+  }
+  .text-theme {
+    color: #6d9540;
+  }
+  .container-white {
+    color: #171717;
+    background-color: #fff;
+  }
+  .container-black {
+    color: #fff;
+    background-color: #171717;
+  }
+  .container-theme-d {
+    color: #fff;
+    background-color: #6d9540;
+  }
+  .container-theme-l {
+    color: #6d9540;
+    background-color: #fff;
+  }
+  /****** imgs ******/
+  .bgimg1, .bgimg2 {
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+.bgimg1 {background-image: url("https://cnt-00.content-na.drive.amazonaws.com/cdproxy/templink/8imW7F8t-v4Myzg2YSHrfUwkG2ssB270v2jXsDscpg8pX92IB?viewBox=1148,765")}
+.bgimg2 {background-image: url("https://cnt-00.content-na.drive.amazonaws.com/cdproxy/templink/y61CtJMRwLUxkb_0Dv8FG7In3wL4Vx1L58gBwXYyyH4pX92IB?viewBox=1148,765")}
 </style>
 </head>
 
-<body class='flex-center'>
+<body class='flex-center container-black'>
   <!-- Slider main container -->
   <div class="swiper-container">
   <header class='top center full-width pad-small' style='z-index: 10;'>www.CostonMission.com</header>
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
         <!-- Slides -->
-        <div class="swiper-slide" style='background-color: #ff11ff;'>
-          <div class='swiper-container center bottom'>Slide 1</div>
+        <div class="swiper-slide bgimg1">
+          <div class='swiper-container center bottom white'>Slide 1</div>
         </div>
-        <div class="swiper-slide" style='background-color: #aa22ff;'>
-          <div class='swiper-container center bottom'>Slide 2</div>
+        <div class="swiper-slide container-black">
+          <div class='swiper-container center bottom white'>Slide 2</div>
         </div>
-        <div class="swiper-slide" style='background-color: #1133ff;'>
-          <div class='swiper-container center bottom'>Slide 3</div>
+        <div class="swiper-slide bgimg2">
+          <div class='swiper-container center bottom white'>Slide 3</div>
         </div>
     </div>
     <!-- If we need pagination -->
