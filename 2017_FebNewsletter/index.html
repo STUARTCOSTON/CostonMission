@@ -1,165 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
-  <link rel='stylesheet' href='https://rawgit.com/stucoston/css/master/w3/w3.css'>
-  <link rel='stylesheet' href='https://rawgit.com/stucoston/css/master/aleppo/flex.css'>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Franklin:100,300,400,500,600,700,900">
+  <title>Coston Mission Newsletter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://rawgit.com/stucoston/css/master/saltwater.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
 
-<style>
-  p, a {
-    font-size: 2vmin;
-    text-decoration: none;
+  <style>
+  header {
+    margin-top: 2vh;
+  }
+  .overlay {
+    opacity: 0.7;
+  }
+  .logo {
+    width: 250px;
+    position:absolute;
+    left:50%;
+    top:3%;
+    transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%)
+  }
+  .droid {
+    font-family: droid;
+  }
+  .scale {
+    m argin:10px;
+    text-align:center;
   }
   a:hover;.text-theme {
     color: #6d9540;
     text-decoration: none;
+    cursor:pointer;
   }
-  .theme-font {
-    font-family: 'Libre Franklin', sans-serif;
+  .justify-align {
+    text-align:justify;
   }
   .swiper-container {
     width: 100%;
     max-width: 800px;
     height: 85vh;
   }  
-  .half {
-    width:49%
-  }
-  .container-white {
-    color: #171717;
-    background-color: #fff;
-  }
-  .container-black {
-    color: #fff;
-    background-color: #171717;
-  }
-  .container-theme-d {
+  .theme-d {
     color: #fff;
     background-color: #6d9540;
   }
-  .container-theme-l {
+  .theme-l {
     color: #6d9540;
     background-color: #fff;
   }
-  .sc-flex-top-center {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
   /****** imgs ******/
-  .bgimg1, .bgimg2 {
-    min-height: 100%;
+  .bgimg-1, .bgimg-2 {
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
   }
-.bgimg1 {background-image: url("https://cnt-00.content-na.drive.amazonaws.com/cdproxy/templink/8imW7F8t-v4Myzg2YSHrfUwkG2ssB270v2jXsDscpg8pX92IB?viewBox=1148,765")}
-.bgimg2 {background-image: url("https://cnt-00.content-na.drive.amazonaws.com/cdproxy/templink/y61CtJMRwLUxkb_0Dv8FG7In3wL4Vx1L58gBwXYyyH4pX92IB?viewBox=1148,765")}
+.bgimg-1 {
+  background-image: url("http://lorempixel.com/800/400/people/1");
+}
+.bgimg-2 {
+  background-image: url("http://lorempixel.com/1200/750/people/2"); 
+}
+.bgimg-3 {background-image: url("http://lorempixel.com/800/400/people/3")}
+.bgimg-4 {background-image: url("http://lorempixel.com/800/400/people/4")}
 </style>
 </head>
 
-<body class='sc-flex-center container-black'>
-  <!-- Slider main container -->
-  <div class="swiper-container">
-  <header class='w3-display-topmiddle w3-pad-med' style='z-index: 10;'><a href='http://www.costonmision.com' class='sc-text-white theme-font' target='_blank'>www.CostonMission.com</a></header>
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide sc-full-height sc-full-width bgimg1">
-        <div class='w3-display-bottommiddle sc-text-white sc-text-center theme-font'><p>Cover</p></div>
-      </div>
-      <div class="swiper-slide sc-full-height sc-full-width container-black">
-        <div class="sc-flex-top-center w3-margin-top">
-          <div class='half w3-justify w3-container'>
-            <h2>Thanksgiving 1</h2>
-            <p>Information and text to make sure that everything is awesome.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class='half w3-justify w3-container'>
-            <h2>Thanksgiving 2</h2>
-            <p>Information and text to make sure that everything is awesome.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
-        <div class='w3-display-bottommiddle sc-text-white sc-text-center theme-font'><p>Page 1</p></div>
-      </div>
-      <div class="swiper-slide sc-full-width sc-full-height container-black">
-        <div class="w3-row-padding w3-margin-top">
-          <div class='half w3-justify w3-container'>
-            <h2>Christmas</h2>
-            <p>Information and text to make sure that everything is awesome.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
-        <div class='w3-display-bottommiddle sc-text-white sc-text-center theme-font'><p>Page 2</p></div>
-      </div>
-      <div class="swiper-slide sc-full-width sc-full-height container-black">
-        <div class="w3-row-padding w3-margin-top">
-          <div class='half w3-justify w3-container'>
-            <h2>Ne Years</h2>
-            <p>Information and text to make sure that everything is awesome.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
-        <div class='w3-display-bottommiddle sc-text-white sc-text-center theme-font'><p>Page 3</p></div>
-      </div>
-      <div class="swiper-slide sc-full-height sc-full-width bgimg2">
-        <div class="w3-row-padding w3-margin-top">
-          <div class='half w3-justify w3-container'>
-            <h2>Pray</h2>
-            <p>Information and text to make sure that everything is awesome.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
-        <div class='w3-display-bottommiddle sc-text-white sc-text-center theme-font'><p>Page 4</p></div>
-      </div>
-      <div class="swiper-slide sc-full-width sc-full-height container-white">
-        <div class="w3-row-padding w3-margin-top">
-          <div class='half w3-justify w3-container'>
-            <h2>Learn</h2>
-            <p>Information and text to make sure that everything is awesome.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
-        <div class='w3-display-bottommiddle sc-text-white sc-text-center theme-font'><p>Page 5</p></div>
-      </div>
-      <div class="swiper-slide sc-full-width sc-full-height container-white">
-        <div class="w3-row-padding w3-margin-top">
-          <div class='half w3-justify w3-container'>
-            <h2>Obey</h2>
-            <p>Information and text to make sure that everything is awesome.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
-        <div class='w3-display-bottommiddle sc-text-white sc-text-center theme-font'><p>Page 6</p></div>
-      </div>
-      <div class="swiper-slide sc-full-width sc-full-height container-white">
-        <div class="w3-row-padding w3-margin-top">
-          <div class='half w3-justify w3-container'>
-            <h2>Work</h2>
-            <p>Information and text to make sure that everything is awesome.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
-        <div class='w3-display-bottommiddle sc-text-white sc-text-center theme-font'><p>Page 7</p></div>
-      </div>
-    </div>
-    
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev swiper-button-white"></div>
-    <div class="swiper-button-next swiper-button-white"></div>
-
-  </div>
+<body>
+<div id="newsletter" class="screen-size grey darken-4" style="height: 100vh;">
+  <header class='topmiddle'>
+    <a class='white-text' href='http://www.costonmision.com' target='_blank'>www.CostonMission.com</a>
+  </header>
+  
+  <div class="valign-wrapper screen-height">
+    <div class="valign container">
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div id="page1" class="swiper-slide bgimg-1">
+            <div class="topmiddle logo">
+              <img src="https://raw.githubusercontent.com/stucoston/costonmission/master/IMG_5225%20transparent.png">
+            </div>
+            <div class='bottommiddle white-text'>
+              <h5 class="droid">Winter 2017</h5>
+              <p class="droid">EDITION 2</p>
+            </div>
+          </div><!--close page1-->
+          
+          <div id="page2" class="swiper-slide bgimg-2">
+            <div class="valign-wrapper full-height">
+              <div class="valign container">
+                <h4 class="center">All About Birth</h4>
+                <div class="white overlay row justify-align">
+                  <div class='col s6'>
+                    <p class="medium">We serve an awesome God.</p>
+                    <p class="medium">He provides for us when we don't ask for it, he protects us without us even knowing about it, and he blesses us when we don't deserve it. Of his own will he chose us to be his children and caused us to be born again. This concept has become very familiar to us recently.</p>
+                    <p class="medium">Looking back over the last few months it rang clear that the theme of our lives has been</p>
+                  </div><!--close page2 left s6 colum-->
+                  <div class='col s6'>
+                    <p class="medium">almost exclusively about birth. The birth Jesus, the birth of the New Year, and the birth of our third child.</p>
+                    <p class="medium">Each one of these births has had a different impact on our lives and provided us with different experiences and new perspectives. As we unveil these three events through this newsletter we hope to give you a look into our lives and a picture of what God is doing in and through us as a family all the time.</p>
+                  </div> <!--close page2 right s6 colum-->
+                </div><!--close page2 row-->
+              </div><!--close page2 valign container-->
+            </div><!--close page2 valign-wrapper-->
+            <div class='bottommiddle black-text droid'><em>Page 2</em></div>
+          </div><!--close page2-->
+          
+          <div id="page3" class="swiper-slide full-size container theme-l">
+            <div class="valign-wrapper full-height">
+              <div class="valign container">
+                <h4 class="center">Birth of Jesus</h4>
+                <div class="row justify-align">
+                  <div class='col s8 offset-s2 container'>
+                    <p class="medium">Information and text to make sure that everything is awesome.</p>
+                    <p class="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+                  </div> <!--close page3 right s6 colum-->
+                </div><!--close page3 row-->
+              </div><!--close page3 valign container-->
+            </div><!--close page3 valign-wrapper-->
+            <div class='bottommiddle black-text droid'><p>Page 3</p></div>
+          </div><!--close page3-->
+          
+          <div id="page4" class="swiper-slide full-size container theme-d">
+            <div class="container">
+              <h4 class="center">PRAY</h4>
+              <div class="row justify-align">
+                <div class='col s6'>
+                  <p class="medium">Information and text to make sure that everything is awesome.</p>
+                  <p class="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p class="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div><!--close page4 left s6 colum-->
+                <div class='col s6 container'>
+                  <p class="medium">Information and text to make sure that everything is awesome.</p>
+                  <p class="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+                  <p class="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div> <!--close page4 right s6 colum-->
+              </div><!--close page4 row-->
+            </div>
+            <div class='bottommiddle white-text droid'><p>Page 4</p></div>
+          </div><!--close page4-->
+          
+        </div><!--close swiper-wrapper-->
+        <!-- If we need navigation buttons -->
+        <div class="hide-on-small-and-down swiper-button-prev swiper-button-black"></div>
+        <div class="hide-on-small-and-down swiper-button-next swiper-button-black"></div>
+      </div><!--close swiper-container-->
+    </div><!--close valign container-->
+  </div><!--close valign-wrapper-->
+</div><!--close newsletter-->
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
   <script>        
@@ -179,6 +170,25 @@
     //scrollbar: '.swiper-scrollbar',
   })        
   </script>
-</body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+  </script>
+  <script>
+    $( '.scale' ).each(function ( i, scale ) {
 
+    var width = $( scale ).width(),
+        html = '<span style="white-space:nowrap">',
+        line = $( box ).wrapInner( html ).children()[ 0 ],
+        n = 100;
+    
+    $( scale ).css( 'font-size', n );
+
+    while ( $( line ).width() > width ) {
+        $( scale ).css( 'font-size', --n );
+    }
+
+    $( scale ).text( $( line ).text() );
+
+});
+  </script>
+</body>
 </html> 
