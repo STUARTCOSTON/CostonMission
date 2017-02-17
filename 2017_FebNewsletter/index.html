@@ -3,23 +3,24 @@
 <head>
   <title>Coston Mission Newsletter</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://rawgit.com/stucoston/css/master/saltwater.css">
+  <link rel="stylesheet" href="//rawgit.com/stucoston/css/master/saltwater.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
 
   <style>
   header {
-    margin-top: 4vh;
+    line-height: 40px;
   }
   .overlay {
     opacity: 0.7;
   }
+  .pageNum {
+    font-size: 200px;
+    font-weight: 700;
+    opacity: 0.3;
+  }
   .logo {
     width: 250px;
-    position:absolute;
-    left:50%;
-    top:3%;
-    transform:translate(-50%,-50%);
-    -ms-transform:translate(-50%,-50%)
+    top: 3%;
   }
   .droid {
     font-family: droid;
@@ -39,8 +40,7 @@
   .swiper-container {
     width: 100%;
     max-width: 800px;
-    height: 90vh;
-    margin-top: 20px;
+    height: 85vh;
   }  
   .theme-d {
     color: #fff;
@@ -67,22 +67,23 @@
 </style>
 </head>
 
-<body class="grey darken-4">
+<body class="grey darken-4 screen-size">
 <div id="newsletter">
-  <header class='topmiddle'>
+  <header class='center'>
     <a class='white-text' href='http://www.costonmision.com' target='_blank'>www.CostonMission.com</a>
   </header>
   
-  <div class="valign-wrapper screen-height">
-    <div class="valign container">
+  <!--<div class="valign-wrapper screen-height">
+    <div class="valign container">-->
+    <div class='container'>
       <!-- Slider main container -->
       <div class="swiper-container">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
-          <div id="page1" class="swiper-slide bgimg-1">
-            <div class="topmiddle logo">
-              <img src="https://raw.githubusercontent.com/stucoston/costonmission/master/IMG_5225%20transparent.png">
+          <div id="page1" class="swiper-slide responsive-img bgimg-1">
+            <div class="topmiddle logo" style="border: 1px solid blue;">
+              <img class="responsive-img" src="https://raw.githubusercontent.com/stucoston/costonmission/master/IMG_5225%20transparent.png">
             </div>
             <div class='bottommiddle white-text center'>
               <h5 class="droid">Winter 2017</h5>
@@ -150,7 +151,7 @@
         <div class="hide-on-small-and-down swiper-button-next swiper-button-black"></div>
       </div><!--close swiper-container-->
     </div><!--close valign container-->
-  </div><!--close valign-wrapper-->
+  <!--</div>--><!--close valign-wrapper-->
 </div><!--close newsletter-->
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
@@ -175,7 +176,6 @@
   </script>
   <script>
     $( '.scale' ).each(function ( i, scale ) {
-
     var width = $( scale ).width(),
         html = '<span style="white-space:nowrap">',
         line = $( box ).wrapInner( html ).children()[ 0 ],
