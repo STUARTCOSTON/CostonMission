@@ -37,11 +37,43 @@
   .justify-align {
     text-align:justify;
   }
-  .swiper-container {
-    width: 100%;
-    max-width: 800px;
-    height: 80vh;
+  /*** if viewport is less than 992px ... ***/
+  @media only screen and (min-width: 992px) {
+    .swiper-container {
+      width: 123.6vh;
+      max-width: 95%;
+      height: 80vh;
+      box-shadow: 3px 3px 15px #222;
+    } 
+  }
+  /*** if viewport is greater than 992px ... ***/
+  @media only screen and (max-width: 992px) {
+    .swiper-container {
+      width: 61.8vh;
+      max-width: 95%;
+      height: 80vh;
+      box-shadow: 3px 3px 15px #222;
+    } 
   }  
+  .swiper-button-next,.swiper-button-prev {
+    position:absolute;
+    top:95%;
+    width:15px;
+    margin-top:-22px;
+    z-index:10;
+    cursor:pointer;
+    -moz-background-size:15px;
+    -webkit-background-size:15px;
+    background-size:15px;
+    background-position:center;
+    background-repeat:no-repeat
+  }
+  .swiper-button-prev,.swiper-container-rtl .swiper-button-next {
+    left:5%;
+  }
+  .swiper-button-next,.swiper-container-rtl .swiper-button-prev {
+    right:5%;
+  }
   .theme-d {
     color: #fff;
     background-color: #6d9540;
@@ -67,21 +99,21 @@
 </style>
 </head>
 
-<body class="grey darken-4 screen-size">
+<body class="grey lighten-3 screen-size">
 <div id="newsletter">
   <header class='center'>
-    <a class='white-text' href='http://www.costonmision.com' target='_blank'>www.CostonMission.com</a>
+    <a class='black-text' href='http://www.costonmision.com' target='_blank'>www.CostonMission.com</a>
   </header>
   
   <!--<div class="valign-wrapper screen-height">
     <div class="valign container">-->
-    <div class='container'>
+    <!--<div class='container'>-->
       <!-- Slider main container -->
-      <div class="swiper-container">
+      <div id="swiper" class="swiper-container">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
-          <div id="page1" class="swiper-slide responsive-img bgimg-1">
+          <div id="page1" class="swiper-slide bgimg-1">
             <div class="topmiddle logo">
               <img class="responsive-img" src="https://raw.githubusercontent.com/stucoston/costonmission/master/IMG_5225%20transparent.png">
             </div>
@@ -93,16 +125,16 @@
           
           <div id="page2" class="swiper-slide bgimg-2">
             <div class="valign-wrapper full-height white overlay">
-              <div class="valign container">
+              <div class="valign padding">
                 <h4 class="center">All About Birth</h4>
                 <div class="row justify-align">
                   <div class='col s6'>
-                    <p class="medium">We serve an awesome God. He provides for us when we don't ask for it, he protects us without us knowing it, and he blesses us when we don't deserve it. Of his own will he chose us and caused us to be born again. This concept has become very familiar to us recently.</p>
-                    <p class="medium">Looking back over the last few months it rang clear that the theme of our lives has been almost exclusively about birth.</p>
+                    <p>We serve an awesome God. He provides for us when we don't ask for it, he protects us without us knowing it, and he blesses us when we don't deserve it. Of his own will he chose us and caused us to be born again, a concept that has become very familiar recently.</p>
+                    <p>The theme of our lives in these last few months has certainly been birth.</p>
                   </div><!--close page2 left s6 colum-->
                   <div class='col s6'>
-                    <p class="medium">The birth Jesus, the birth of the New Year, and the birth of our third child.</p>
-                    <p class="medium">Each one of these births has had a different impact on our lives and provided us with different experiences and new perspectives. As we unveil these three events through this newsletter we hope to give you a look into our lives and a picture of what God is doing in and through us as a family all the time.</p>
+                    <p>The birth Jesus, the birth of the New Year, and the birth of our third child.</p>
+                    <p>Each one of these births has had a different impact on our lives and provided us with different experiences and new perspectives. This newsletter will unfold these three events giving you a look into our lives and the impact these events have had on us.</p>
                   </div> <!--close page2 right s6 colum-->
                 </div><!--close page2 row-->
               </div><!--close page2 valign container-->
@@ -122,7 +154,7 @@
                 </div><!--close page3 row-->
               </div><!--close page3 valign container-->
             </div><!--close page3 valign-wrapper-->
-            <div class='bottommiddle black-text droid'><p>Page 3</p></div>
+            <div class='bottommiddle black-text droid'><em>Page 3</em></div>
           </div><!--close page3-->
           
           <div id="page4" class="swiper-slide full-size container theme-d">
@@ -141,7 +173,7 @@
                 </div> <!--close page4 right s6 colum-->
               </div><!--close page4 row-->
             </div>
-            <div class='bottommiddle white-text droid'><p>Page 4</p></div>
+            <div class='bottommiddle black-text droid'><em>Page 4</em></div>
           </div><!--close page4-->
           
         </div><!--close swiper-wrapper-->
@@ -149,27 +181,41 @@
         <div class="hide-on-small-and-down swiper-button-prev swiper-button-black"></div>
         <div class="hide-on-small-and-down swiper-button-next swiper-button-black"></div>
       </div><!--close swiper-container-->
-    </div><!--close valign container-->
+    <!--</div>--><!--close valign container-->
   <!--</div>--><!--close valign-wrapper-->
 </div><!--close newsletter-->
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
-  <script>        
-  var mySwiper = new Swiper ('.swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    
-    // If we need pagination
-    //pagination: '.swiper-pagination',
-    
-    // Navigation arrows
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    
-    // And if we need scrollbar
-    //scrollbar: '.swiper-scrollbar',
-  })        
+  <script> 
+  var w = window.innerWidth;
+  if(w > 1000) {
+    var mySwiper = new Swiper ('.swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      effect: 'slide',
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      mousewheelControl: 'true',
+      keyboardControl: 'true',
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+    })
+  }
+  else {
+    var mySwiper = new Swiper ('.swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      effect: 'slide',
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      mousewheelControl: 'true',
+      keyboardControl: 'true',
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+    })
+  }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js">
   </script>
@@ -191,4 +237,4 @@
 });
   </script>
 </body>
-</html> 
+</html>
