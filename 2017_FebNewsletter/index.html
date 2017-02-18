@@ -41,18 +41,20 @@
   @media only screen and (min-width: 992px) {
     .swiper-container {
       width: 123.6vh;
-      max-width: 95%;
+      max-width: 100%;
       height: 80vh;
-      box-shadow: 3px 3px 15px #222;
+      box-shadow: 2px 2px 10px #222;
+      border: 1px solid darkgrey;
     } 
   }
   /*** if viewport is greater than 992px ... ***/
   @media only screen and (max-width: 992px) {
     .swiper-container {
       width: 61.8vh;
-      max-width: 95%;
+      max-width: 100%;
       height: 80vh;
-      box-shadow: 3px 3px 15px #222;
+      box-shadow: 1px 1px 6px #222;
+      border: 1px solid darkgrey;
     } 
   }  
   .swiper-button-next,.swiper-button-prev {
@@ -96,6 +98,52 @@
 }
 .bgimg-3 {background-image: url("http://lorempixel.com/800/400/people/3")}
 .bgimg-4 {background-image: url("http://lorempixel.com/800/400/people/4")}
+.top-half, .bottom-half {
+  position:absolute;
+  height: 50%;
+  width: 100%;
+}
+.top;half {
+  top:0;
+}
+.bottom-half {
+  bottom:0;
+}
+.upper-left, .upper-right, .lower-left, .lower-right {
+  position:absolute;
+  height: 50%;
+  width: 50%;
+}
+.upper-left {
+  top:0;
+  left:0;
+}
+.upper-right {
+  top:0;
+  right:0;
+}
+.lower-left {
+  bottom:0;
+  left:0;
+}
+.lower-right {
+  bottom:0;
+  right:0;
+}
+.duty {
+  position: absolute;
+  left: 0px;
+  bottom: -150px;
+  font-size: 140px;
+  color: black;
+  opacity: 0.5;
+  -ms-transform: rotate(-90deg); /* IE 9 */
+  -ms-transform-origin: 0% 0%;
+  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+  -webkit-transform-origin: 0% 0%;
+  transform: rotate(-90deg);
+  transform-origin: 0% 0%;
+}
 </style>
 </head>
 
@@ -113,7 +161,21 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
-          <div id="page1" class="swiper-slide bgimg-1">
+          <div id="cover1" class="swiper-slide bgimg-1 hide-on-small-and-down">
+            <div class="topmiddle logo">
+              <img class="responsive-img" src="https://raw.githubusercontent.com/stucoston/costonmission/master/IMG_5225%20transparent.png">
+            </div>
+            <div class='bottommiddle white-text center'>
+              <h5 class="droid">Follow Us</h5>
+              <div class="bottom-half center">
+                <i class="fa fa-facebook btn white-text"></i>
+                <i class="fa fa-twitter btn white-text"></i>
+                <i class="fa fa-instagram btn white-text"></i>
+              </div>
+            </div>
+          </div><!--close cover1-->
+          
+          <div id="cover2" class="swiper-slide bgimg-1">
             <div class="topmiddle logo">
               <img class="responsive-img" src="https://raw.githubusercontent.com/stucoston/costonmission/master/IMG_5225%20transparent.png">
             </div>
@@ -121,7 +183,7 @@
               <h5 class="droid">Winter 2017</h5>
               <p class="droid">EDITION 2</p>
             </div>
-          </div><!--close page1-->
+          </div><!--close cover2-->
           
           <div id="page2" class="swiper-slide bgimg-2">
             <div class="valign-wrapper full-height white overlay">
@@ -131,14 +193,14 @@
                   <div class='col s6'>
                     <p>We serve an awesome God. He provides for us when we don't ask for it, he protects us without us knowing it, and he blesses us when we don't deserve it. Of his own will he chose us and caused us to be born again, a concept that has become very familiar recently.</p>
                     <p>The theme of our lives in these last few months has certainly been birth.</p>
-                  </div><!--close page2 left s6 colum-->
+                  </div><!--close left s6 colum-->
                   <div class='col s6'>
                     <p>The birth Jesus, the birth of the New Year, and the birth of our third child.</p>
                     <p>Each one of these births has had a different impact on our lives and provided us with different experiences and new perspectives. This newsletter will unfold these three events giving you a look into our lives and the impact these events have had on us.</p>
-                  </div> <!--close page2 right s6 colum-->
-                </div><!--close page2 row-->
-              </div><!--close page2 valign container-->
-            </div><!--close page2 valign-wrapper-->
+                  </div> <!--close right s6 colum-->
+                </div><!--close row-->
+              </div><!--close valign container-->
+            </div><!--close valign-wrapper-->
             <div class='bottommiddle black-text droid'><em>Page 2</em></div>
           </div><!--close page2-->
           
@@ -148,33 +210,89 @@
                 <h4 class="center">Birth of Jesus</h4>
                 <div class="row justify-align">
                   <div class='col s8 offset-s2 container'>
-                    <p class="medium">Information and text to make sure that everything is awesome.</p>
-                    <p class="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
-                  </div> <!--close page3 right s6 colum-->
-                </div><!--close page3 row-->
-              </div><!--close page3 valign container-->
-            </div><!--close page3 valign-wrapper-->
+                    <p>Information and text to make sure that everything is awesome.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+                  </div> <!--close right s6 colum-->
+                </div><!--close row-->
+              </div><!--close valign container-->
+            </div><!--close valign-wrapper-->
             <div class='bottommiddle black-text droid'><em>Page 3</em></div>
           </div><!--close page3-->
           
-          <div id="page4" class="swiper-slide full-size container theme-d">
-            <div class="container">
-              <h4 class="center">PRAY</h4>
-              <div class="row justify-align">
-                <div class='col s6'>
-                  <p class="medium">Information and text to make sure that everything is awesome.</p>
-                  <p class="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p class="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div><!--close page4 left s6 colum-->
-                <div class='col s6 container'>
-                  <p class="medium">Information and text to make sure that everything is awesome.</p>
-                  <p class="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
-                  <p class="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div> <!--close page4 right s6 colum-->
-              </div><!--close page4 row-->
-            </div>
+          <div id="page4" class="swiper-slide full-size container theme-l">
+            <div class="valign-wrapper full-height">
+              <div class="valign container">
+                <h4 class="center">Birth of Jesus Cont.</h4>
+              </div><!--close valign container-->
+            </div><!--close valign-wrapper-->
             <div class='bottommiddle black-text droid'><em>Page 4</em></div>
           </div><!--close page4-->
+          
+          <div id="page5" class="swiper-slide full-size container theme-d">
+            <div class="container">
+              <h4 class="duty">PRAY</h4>
+            </div>
+            <div class='bottommiddle black-text droid'><em>Page 5</em></div>
+          </div><!--close page5-->
+          
+          <div id="page6" class="swiper-slide full-size container theme-d">
+            <div class="container">
+              <div class="row justify-align bottom-half">
+                <div class='col s6'>
+                  <h5>Prayer<br/><span class="droid padding-left"><em>Requests</em></span></h5>
+                  <ol>
+                    <li>request 1</li>
+                    <li>request 2</li>
+                    <li>request 3</li>
+                    <li>request 4</li>
+                  </ol>
+                </div><!--close left s6 colum-->
+                <div class='col s6 container'>
+                  <h5>Recently<br/><span class="droid padding-left"><em>Answered</em></span></h5>
+                  <ol>
+                    <li>answer 1</li>
+                    <li>answer 2</li>
+                    <li>answer 3</li>
+                    <li>answer 4</li>
+                  </ol>
+                </div> <!--close right s6 colum-->
+              </div><!--close row-->
+            </div>
+            <div class='bottommiddle black-text droid'><em>Page 6</em></div>
+          </div><!--close page6-->
+          
+          <div id="page7" class="swiper-slide full-size container theme-d">
+            <div class="container">
+              <h4 class="center duty">LEARN</h4>
+            </div>
+            <div class='bottommiddle black-text droid'><em>Page 7</em></div>
+          </div><!--close page7-->
+          
+          <div id="page8" class="swiper-slide full-size container theme-d">
+            <div class="container">
+              <div class="row justify-align bottom-half">
+                <div class='col s6'>
+                  <h5>Prayer<br/><span class="droid padding-left"><em>Requests</em></span></h5>
+                  <ol>
+                    <li>request 1</li>
+                    <li>request 2</li>
+                    <li>request 3</li>
+                    <li>request 4</li>
+                  </ol>
+                </div><!--close left s6 colum-->
+                <div class='col s6 container'>
+                  <h5>Recently<br/><span class="droid padding-left"><em>Answered</em></span></h5>
+                  <ol>
+                    <li>answer 1</li>
+                    <li>answer 2</li>
+                    <li>answer 3</li>
+                    <li>answer 4</li>
+                  </ol>
+                </div> <!--close right s6 colum-->
+              </div><!--close row-->
+            </div>
+            <div class='bottommiddle black-text droid'><em>Page 8</em></div>
+          </div><!--close page8-->
           
         </div><!--close swiper-wrapper-->
         <!-- If we need navigation buttons -->
@@ -198,6 +316,7 @@
       slidesPerGroup: 2,
       mousewheelControl: 'true',
       keyboardControl: 'true',
+      grabCursor: 'true',
       nextButton: '.swiper-button-next',
       prevButton: '.swiper-button-prev',
     })
@@ -212,6 +331,7 @@
       slidesPerGroup: 1,
       mousewheelControl: 'true',
       keyboardControl: 'true',
+      grabCursor: 'true',
       nextButton: '.swiper-button-next',
       prevButton: '.swiper-button-prev',
     })
@@ -237,4 +357,4 @@
 });
   </script>
 </body>
-</html>
+</html> 
