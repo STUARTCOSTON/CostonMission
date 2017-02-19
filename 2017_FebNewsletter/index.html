@@ -4,10 +4,15 @@
   <title>Coston Mission Newsletter</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="//rawgit.com/stucoston/css/master/saltwater.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Franklin">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <style>
+  html {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 2.25vh;
+  }
   header {
     line-height: 40px;
   }
@@ -15,59 +20,52 @@
     opacity: 0.7;
   }
   .pageNum {
-    font-size: 200px;
+    font-size: 20vh;
     font-weight: 700;
     opacity: 0.3;
   }
   .logo {
-    width: 400px;
+    width: 40vh;
     top: 3%;
   }
   .droid {
     font-family: droid;
-  }
-  .scale {
-    margin:10px;
-    text-align:center;
   }
   a:hover;.text-theme {
     color: #6d9540;
     text-decoration: none;
     cursor:pointer;
   }
-  .justify-align {
-    text-align:justify;
-  }
-  /*** if viewport is less than 992px ... ***/
+  /*** if viewport is greater than 992px ... ***/
   @media only screen and (min-width: 992px) {
     .swiper-container {
       width: 123.6vh;
       max-width: 100%;
       height: 80vh;
-      box-shadow: 2px 2px 10px #222;
+      box-shadow: 2px 2px 10px #555;
       border: 1px solid darkgrey;
     } 
   }
-  /*** if viewport is greater than 992px ... ***/
+  /*** if viewport is less than 992px ... ***/
   @media only screen and (max-width: 992px) {
     .swiper-container {
       width: 61.8vh;
       max-width: 100%;
       height: 80vh;
-      box-shadow: 1px 1px 6px #222;
+      box-shadow: 1px 1px 6px #555;
       border: 1px solid darkgrey;
     } 
   }  
   .swiper-button-next,.swiper-button-prev {
     position:absolute;
     top:95%;
-    width:15px;
+    width:3vh;
     margin-top:-22px;
     z-index:10;
     cursor:pointer;
-    -moz-background-size:15px;
-    -webkit-background-size:15px;
-    background-size:15px;
+    -moz-background-size:3vh;
+    -webkit-background-size:3vh;
+    background-size:3vh;
     background-position:center;
     background-repeat:no-repeat
   }
@@ -91,18 +89,15 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-.bgimg-1 {
-  background-image: url("http://lorempixel.com/800/400/people/1");
-}
-.bgimg-2 {
-  background-image: url("http://lorempixel.com/1200/750/people/2"); 
-}
+.bgimg-1 {background-image: url("http://lorempixel.com/800/400/people/1");}
+.bgimg-2 {background-image: url("http://lorempixel.com/1200/750/people/2");}
 .bgimg-3 {background-image: url("http://lorempixel.com/800/400/people/3")}
 .bgimg-4 {background-image: url("http://lorempixel.com/800/400/people/4")}
 .top-half, .bottom-half {
   position:absolute;
   height: 50%;
   width: 100%;
+  padding:10px;
 }
 .top;half {
   top:0;
@@ -114,6 +109,7 @@
   position:absolute;
   height: 50%;
   width: 50%;
+  padding:0px;
 }
 .upper-left {
   top:0;
@@ -132,18 +128,35 @@
   right:0;
 }
 .duty {
+  font-weight: 500;
   position: absolute;
   left: 0px;
-  bottom: -150px;
-  font-size: 140px;
+  bottom: -20%;
+  font-size: 20vh;
   color: black;
-  opacity: 0.5;
+  opacity: 0.3;
   -ms-transform: rotate(-90deg); /* IE 9 */
   -ms-transform-origin: 0% 0%;
   -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
   -webkit-transform-origin: 0% 0%;
   transform: rotate(-90deg);
   transform-origin: 0% 0%;
+}
+ol {
+  padding-left:15px;
+}
+.padding-square {
+  padding: 5px;
+}
+i {
+  width: 4vh;
+  height: 4vh;
+  margin: 0 1vh;
+}
+i:hover {
+  background: white;
+  color: black;
+  cursor:pointer;
 }
 </style>
 </head>
@@ -163,21 +176,21 @@
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div id="cover1" class="swiper-slide bgimg-1">
-            <div class="logo center-offset" style="position: absolute; left:100%;">
-              <img class="responsive-img" src="https://raw.githubusercontent.com/stucoston/costonmission/master/IMG_5225%20transparent.png">
+            <div class="upper-half center white-text padding">
+              <h5> We are the Coston's, and we're on a mission to make disciples.</h5>
             </div>
             <div class='bottommiddle white-text center'>
               <div class="center">
-                <i class="fa fa-facebook small circle border padding-right"><a href='http://www.facebook.com/costonmission'></a></i>
-                <i class="fa fa-twitter small circle border"><a href='http://twitter.com/stucoston'></a></i>
-                <i class="fa fa-instagram small circle border padding-left"><a href='https://www.instagram.com/melissacoston/'></a></i>
+                <i class="fa fa-facebook small circle border padding-square"><a href='http://www.facebook.com/costonmission'></a></i>
+                <i class="fa fa-twitter small circle border padding-square"><a href='http://twitter.com/stucoston'></a></i>
+                <i class="fa fa-instagram small circle border padding-square"><a href='https://www.instagram.com/melissacoston/'></a></i>
               </div>
               <h5 class="droid">Follow Us</h5>
             </div>
           </div><!--close cover1-->
           
           <div id="cover2" class="swiper-slide bgimg-1">
-            <div class="logo center-offset" style="position: absolute; left:0%;">
+            <div class="logo topmiddle">
               <img class="responsive-img" src="https://raw.githubusercontent.com/stucoston/costonmission/master/IMG_5225%20transparent.png">
             </div>
             <div class='bottommiddle white-text center'>
@@ -221,11 +234,11 @@
             <div class='bottommiddle black-text droid'><em>Page 4</em></div>
           </div><!--close page4-->
           
-          <div id="page5" class="swiper-slide full-size container theme-d">
-            <div class="container">
-              <div class="row justify-align bottom-half">
+          <div id="page5" class="swiper-slide full-size container white">
+            <div class="valign-wrapper">
+              <div class="row valign full-width padding-left">
                 <div class='col s6'>
-                  <h5>Prayer<br/><span class="droid padding-left"><em>Requests</em></span></h5>
+                  <h5 class="droid"><em>Prayer</em><br/><span class="droid padding-left"><em>Requests</em></span></h5>
                   <ol>
                     <li>request 1</li>
                     <li>request 2</li>
@@ -233,8 +246,8 @@
                     <li>request 4</li>
                   </ol>
                 </div><!--close left s6 colum-->
-                <div class='col s6 container'>
-                  <h5>Recently<br/><span class="droid padding-left"><em>Answered</em></span></h5>
+                <div class='col s6'>
+                  <h5 class="droid"><em>Recently</em><br/><span class="padding-left"><em>Answered</em></span></h5>
                   <ol>
                     <li>answer 1</li>
                     <li>answer 2</li>
@@ -300,7 +313,7 @@
             <div class="container">
               <div class="row justify-align bottom-half">
                 <div class='col s6'>
-                  <h5>Prayer<br/><span class="droid padding-left"><em>Requests</em></span></h5>
+                  <h5 class="droid">Prayer<br/><span class="droid padding-left"><em>Requests</em></span></h5>
                   <ol>
                     <li>request 1</li>
                     <li>request 2</li>
@@ -309,7 +322,7 @@
                   </ol>
                 </div><!--close left s6 colum-->
                 <div class='col s6 container'>
-                  <h5>Recently<br/><span class="droid padding-left"><em>Answered</em></span></h5>
+                  <h5 class="droid">Recently<br/><span class="droid padding-left"><em>Answered</em></span></h5>
                   <ol>
                     <li>answer 1</li>
                     <li>answer 2</li>
@@ -514,25 +527,6 @@
       prevButton: '.swiper-button-prev',
     })
   }
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-  </script>
-  <script>
-    $( '.scale' ).each(function ( i, scale ) {
-    var width = $( scale ).width(),
-        html = '<span style="white-space:nowrap">',
-        line = $( box ).wrapInner( html ).children()[ 0 ],
-        n = 100;
-    
-    $( scale ).css( 'font-size', n );
-
-    while ( $( line ).width() > width ) {
-        $( scale ).css( 'font-size', --n );
-    }
-
-    $( scale ).text( $( line ).text() );
-
-});
   </script>
 </body>
 </html> 
