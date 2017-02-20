@@ -18,6 +18,15 @@
   }
   .overlay {
     opacity: 0.7;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+    .overlaycover {
+    opacity: 0.3;
+    position: absolute;
+    height: 100%;
+    width: 100%;
   }
   .pageNum {
     font-size: 20vh;
@@ -25,8 +34,14 @@
     opacity: 0.3;
   }
   .logo {
-    width: 40vh;
-    top: 3%;
+    width: 8vh;
+    top: 10%;
+    /*-webkit-filter: invert(1);
+    filter: invert(1);*/
+  }
+  .tagline {
+    font-family: 'Roboto', sans-serif;
+    top: 18%;
   }
   .droid {
     font-family: droid;
@@ -84,22 +99,26 @@
     background-color: #fff;
   }
   /****** imgs ******/
-  .bgimg-1, .bgimg-2 {
+  .bgimg-1, .bgimg-2, .bgimg-3-1, .bgimg-3-2, .bgimg-4-1, .bgimg-4-2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
-.bgimg-1 {background-image: url("http://lorempixel.com/800/400/people/1");}
-.bgimg-2 {background-image: url("http://lorempixel.com/1200/750/people/2");}
-.bgimg-3 {background-image: url("http://lorempixel.com/800/400/people/3")}
-.bgimg-4 {background-image: url("http://lorempixel.com/800/400/people/4")}
+.bgimg-1 {
+  background-image: url("https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5859.jpg?raw=true");
+}
+.bgimg-2 {background-image: url("https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5511.jpg?raw=true");}
+.bgimg-3-1 {background-image: url("https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/page2.jpg?raw=true")}
+.bgimg-3-2 {background-image: url("https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/page3.jpg?raw=true")}
+.bgimg-4-1 {background-image: url("https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/page4.JPG?raw=true")}
+.bgimg-4-2 {background-image: url("https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/page5.jpg?raw=true")}
 .top-half, .bottom-half {
   position:absolute;
-  height: 50%;
-  width: 100%;
-  padding:10px;
+  height: 45%;
+  width: 90%;
+  margin: 20px;
 }
-.top;half {
+.top-half {
   top:0;
 }
 .bottom-half {
@@ -107,9 +126,9 @@
 }
 .upper-left, .upper-right, .lower-left, .lower-right {
   position:absolute;
-  height: 50%;
-  width: 50%;
-  padding:0px;
+  height: 37%;
+  width: 41%;
+  margin: 0 20px 50px 20px;
 }
 .upper-left {
   top:0;
@@ -146,7 +165,10 @@ ol {
   padding-left:15px;
 }
 .padding-square {
-  padding: 5px;
+  padding: 10px;
+}
+    .margin-square {
+  margin: 10px;
 }
 i {
   width: 4vh;
@@ -154,10 +176,18 @@ i {
   margin: 0 1vh;
 }
 i:hover {
-  background: white;
-  color: black;
+  background: black;
+  color: white;
   cursor:pointer;
+  border-color: black;
+  box-shadow: 6px 6px 6px #555;
 }
+    .bringtofront {
+      z-index:10;
+    }
+    .borderblue {
+      border: 1px solid blue;
+    }
 </style>
 </head>
 
@@ -172,34 +202,36 @@ i:hover {
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div id="cover1" class="swiper-slide bgimg-1">
-            <div class="upper-half center white-text padding">
-              <h5> We are the Coston's, and we're on a mission to make disciples.</h5>
+            <div class="white overlaycover"></div>
+            <div class="top-half center padding bringtofront">
+                  <h5> We are the Coston's, and we're on a mission to make disciples.</h5>
             </div>
-            <div class='bottommiddle white-text center'>
-              <div class="center">
-                <i class="fa fa-facebook small circle border padding-square"><a href='http://www.facebook.com/costonmission'></a></i>
-                <i class="fa fa-twitter small circle border padding-square"><a href='http://twitter.com/stucoston'></a></i>
-                <i class="fa fa-instagram small circle border padding-square"><a href='https://www.instagram.com/melissacoston/'></a></i>
-              </div>
+            <div class='bottommiddle bringtofront center'>
+              <i class="fa fa-facebook small circle border padding-square"><a href='http://www.facebook.com/costonmission'></a></i>
+              <i class="fa fa-twitter small circle border padding-square"><a href='http://twitter.com/stucoston'></a></i>
+              <i class="fa fa-instagram small circle border padding-square"><a href='https://www.instagram.com/melissacoston/'></a></i>
               <h5 class="droid">Follow Us</h5>
             </div>
           </div><!--close cover1-->
           
-          <div id="cover2" class="swiper-slide bgimg-1">
-            <div class="logo topmiddle">
-              <img class="responsive-img" src="IMG_5225%20transparent.png">
+          <div id="cover2" class="swiper-slide bgimg-2">
+            <div class="white overlaycover"></div>
+            <div class="logo topmiddle bringtofront">
+              <img class="responsive-img" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true">
             </div>
-            <div class='bottommiddle white-text center'>
+            <div class="tagline topmiddle bringtofront"><h5 class="">COSTON<b>MISSION</b></h5></div>
+            <div class='bottommiddle center bringtofront'>
               <h5 class="droid">Winter 2017</h5>
               <p class="droid">EDITION 2</p>
             </div>
           </div><!--close cover2-->
           
-          <div id="page2" class="swiper-slide bgimg-2">
-            <div class="valign-wrapper full-height white overlay">
-              <div class="valign padding">
-                <h4 class="center">All About Birth</h4>
-                <div class="row justify-align">
+          <div id="page2" class="swiper-slide bgimg-3-1">
+            <!--<div class="white overlaycover"></div>-->
+            <div class="valign-wrapper">
+              <div class="valign bringtofront">
+                <h4 class="center white-text">All About Birth</h4>
+                <div class="row justify-align white-text">
                   <div class='col s6'>
                     <p>We serve an awesome God. He provides for us when we don't ask for it, he protects us without us knowing it, and he blesses us when we don't deserve it. Of his own will he chose us and caused us to be born again, a concept that has become very familiar recently.</p>
                     <p>The theme of our lives in these last few months has certainly been birth.</p>
@@ -211,49 +243,57 @@ i:hover {
                 </div><!--close row-->
               </div><!--close valign container-->
             </div><!--close valign-wrapper-->
-            <div class='bottommiddle black-text droid'><em>Page 2</em></div>
+            <div class='bottommiddle white-text droid'>
+              <img class="left padding-right" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=25px; style="filter:invert(1);-webkit-filter:invert(1);">
+              <em>Page 2</em>
+            </div>
           </div><!--close page2-->
           
-          <div id="page3" class="swiper-slide full-size container theme-d">
-            <div class="valign-wrapper full-height">
-              <div class="valign container">
-                ...image
-              </div><!--close valign container-->
-            </div><!--close valign-wrapper-->
-            <div class='bottommiddle black-text droid'><em>Page 3</em></div>
+          <div id="page3" class="swiper-slide container bgimg-3-2">
+            
+            <div class='bottommiddle white-text droid'>
+              <img class="left padding-right" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=25px; style="filter:invert(1);-webkit-filter:invert(1);">
+              <em>Page 3</em>
+            </div>
           </div><!--close page3-->
           
-          <div id="page4" class="swiper-slide full-size container theme-d">
+          <div id="page4" class="swiper-slide full-size container bgimg-4-1">
             <div class="container">
-              <h4 class="duty">PRAY</h4>
+              <h4 class="duty white-text">PRAY</h4>
             </div>
-            <div class='bottommiddle black-text droid'><em>Page 4</em></div>
+            <div class='bottommiddle white-text droid'>
+              <img class="left padding-right" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=25px; style="filter:invert(1);-webkit-filter:invert(1);">
+              <em>Page 4</em>
+            </div>
           </div><!--close page4-->
           
-          <div id="page5" class="swiper-slide full-size container white">
+          <div id="page5" class="swiper-slide full-size container bgimg-4-2 white-text">
             <div class="valign-wrapper">
               <div class="row valign full-width padding-left">
                 <div class='col s6'>
                   <h5 class="droid"><em>Prayer</em><br/><span class="droid padding-left"><em>Requests</em></span></h5>
-                  <ol>
-                    <li>request 1</li>
-                    <li>request 2</li>
-                    <li>request 3</li>
-                    <li>request 4</li>
+                  <ol style="font-size:1.7vh;" class="justify-align">
+                    <li>Pray for our church as we begin planting a new congregation in one of the least Christian cities in North America</li><br/>
+                    <li>Pray for a mission team that our church is sending to Southern Asia this spring</li><br/>
+                    <li>Pray for continued participation in both Stu's and Melissa's discipleship groups</li><br/>
+                    <li>Pray for our patience and endurance as we embark on the journey of having three kids</li>
                   </ol>
                 </div><!--close left s6 colum-->
                 <div class='col s6'>
                   <h5 class="droid"><em>Recently</em><br/><span class="padding-left"><em>Answered</em></span></h5>
-                  <ol>
-                    <li>answer 1</li>
-                    <li>answer 2</li>
-                    <li>answer 3</li>
-                    <li>answer 4</li>
+                  <ol style="font-size:1.7vh;" class="justify-align">
+                    <li>Melissa and Indie's safe and healthy pregnancy and delivery</li><br/>
+                    <li>Plans for the church plant have been completed and event timelines have been drafted</li><br/>
+                    <li>We have both been experiencing more courage to engage in spiritual conversations with unbelievers</li><br/>
+                    <li>Both of our discipleship groups have been faithfully engaged in each others lives and fruit is continuing to be born</li>
                   </ol>
                 </div> <!--close right s6 colum-->
               </div><!--close row-->
             </div>
-            <div class='bottommiddle black-text droid'><em>Page 5</em></div>
+            <div class='bottommiddle white-text droid'>
+              <img class="left padding-right" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=25px; style="filter:invert(1);-webkit-filter:invert(1);">
+              <em>Page 5</em>
+            </div>
           </div><!--close page5-->
           
           <div id="page6" class="swiper-slide full-size container theme-l">
@@ -525,4 +565,4 @@ i:hover {
   }
   </script>
 </body>
-</html>
+</html> 
