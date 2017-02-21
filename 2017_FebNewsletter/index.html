@@ -52,7 +52,7 @@
     cursor:pointer;
   }
   /*** if viewport is greater than 567px ... ***/
-  @media (min-width: 992px), handheld (orientation: landscape) {
+  @media only screen (min-width: 992px) , handheld and (orientation: landscape) {
     .swiper-container {
       width: 123.6vh;
       max-width: 95%;
@@ -62,7 +62,7 @@
     } 
   }
   /*** if viewport is less than 567px ... ***/
-  @media (max-width:992px), handheld (orientation: portrait) {
+  @media only screen (max-width:992px) , handheld and (orientation: portrait) {
     .swiper-container {
       width: 61.8vh;
       max-width: 95%;
