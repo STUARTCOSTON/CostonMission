@@ -4,14 +4,14 @@
   <title>Coston Mission Newsletter</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="//rawgit.com/stucoston/css/master/saltwater.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Franklin">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Franklin|Montserrat:200,300,400">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <style>
   html {
     font-family: 'Libre Franklin', sans-serif;
-    font-size: 2.25vh;
+    font-size: 1.7vh;
   }
   header {
     line-height: 40px;
@@ -40,10 +40,10 @@
     filter: invert(1);*/
   }
   .tagline {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'montserrat', sans-serif;
     top: 18%;
   }
-  .droid {
+  .droid, h1, h2, h3, h4, h5, h6 {
     font-family: droid;
   }
   a:hover;.text-theme {
@@ -51,21 +51,21 @@
     text-decoration: none;
     cursor:pointer;
   }
-  /*** if viewport is greater than 992px ... ***/
-  @media only screen and (min-width: 992px) {
+  /*** if viewport is greater than 567px ... ***/
+  @media (min-width: 992px), handheld (orientation: landscape) {
     .swiper-container {
       width: 123.6vh;
-      max-width: 100%;
+      max-width: 95%;
       height: 80vh;
       box-shadow: 2px 2px 10px #555;
       border: 1px solid darkgrey;
     } 
   }
-  /*** if viewport is less than 992px ... ***/
-  @media only screen and (max-width: 992px) {
+  /*** if viewport is less than 567px ... ***/
+  @media (max-width:992px), handheld (orientation: landscape) {
     .swiper-container {
       width: 61.8vh;
-      max-width: 100%;
+      max-width: 95%;
       height: 80vh;
       box-shadow: 1px 1px 6px #555;
       border: 1px solid darkgrey;
@@ -99,43 +99,48 @@
     background-color: #fff;
   }
   /****** imgs ******/
-  .bgimg-1, .bgimg-2, .bgimg-3-1, .bgimg-3-2, .bgimg-4-1, .bgimg-4-2 {
+  .bgimg-1, .bgimg-2, .bgimg-3-1, .bgimg-3-2, .bgimg-4-1, .bgimg-4-2, .bgimg-page6, .bgimg-bhpage7, .bgimg-urpage8, .bgimg-lrpage8, .bgimg-page9 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 .bgimg-1 {
-  background-image: url("https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5859.jpg?raw=true");
+  background-image: url("https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_0174.jpg?raw=true");
 }
-.bgimg-2 {background-image: url("https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5511.jpg?raw=true");}
-.bgimg-3-1 {background-image: url("https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/page2.jpg?raw=true")}
-.bgimg-3-2 {background-image: url("https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/page3.jpg?raw=true")}
-.bgimg-4-1 {background-image: url("https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/page4.JPG?raw=true")}
-.bgimg-4-2 {background-image: url("https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/page5.jpg?raw=true")}
+.bgimg-2 {background-image: url("https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_0172.jpg?raw=true");}
+.bgimg-3-1 {background-image: url("https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/page2.jpg?raw=true");background-position: right;}
+.bgimg-3-2 {background-image: url("https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/page3.jpg?raw=true");background-position: left;}
+.bgimg-4-1 {background-image: url("https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/page4.JPG?raw=true");background-position: right;}
+.bgimg-4-2 {background-image: url("https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/page5.jpg?raw=true");background-position: left;}
+.bgimg-page6 {background-image: url("https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5511.jpg?raw=true")}
+.bgimg-bhpage7 {background-image: url('https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5554.jpg?raw=true')}
+.bgimg-urpage8 {background-image: url('https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5662.jpg?raw=true')}
+.bgimg-lrpage8 {background-image: url('https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5689.jpg?raw=true');background-position: top;}
+.bgimg-page9 {background-image: url('https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/DSC_0038.JPG?raw=true')}
 .top-half, .bottom-half {
   position:absolute;
-  height: 45%;
+  height: 40%;
   width: 90%;
   margin: 20px;
 }
 .top-half {
-  top:0;
+  top:0px;
 }
 .bottom-half {
-  bottom:0;
+  bottom:30px;
 }
 .upper-left, .upper-right, .lower-left, .lower-right {
   position:absolute;
-  height: 37%;
+  height: 40%;
   width: 41%;
   margin: 0 20px 50px 20px;
 }
 .upper-left {
-  top:0;
+  top:20px;
   left:0;
 }
 .upper-right {
-  top:0;
+  top:20px;
   right:0;
 }
 .lower-left {
@@ -147,6 +152,7 @@
   right:0;
 }
 .duty {
+  font-family: 'montserrat', sans-serif;
   font-weight: 500;
   position: absolute;
   left: 0px;
@@ -165,7 +171,7 @@ ol {
   padding-left:15px;
 }
 .padding-square {
-  padding: 10px;
+  padding: 5px;
 }
     .margin-square {
   margin: 10px;
@@ -182,6 +188,9 @@ i:hover {
   border-color: black;
   box-shadow: 6px 6px 6px #555;
 }
+    .img-shadow {
+      box-shadow: 2px 2px 6px #555;
+    }
     .bringtofront {
       z-index:10;
     }
@@ -194,7 +203,7 @@ i:hover {
 <body class="grey lighten-3 screen-size">
 <div id="newsletter">
   <header class='center'>
-    <a class='black-text' href='http://www.costonmision.com' target='_blank'>www.CostonMission.com</a>
+    <a class='black-text' href='http://www.costonmision.com' target='_blank'><span style="font-size:1.5rem;">www.CostonMission.com</span></a>
   </header>
       <!-- Slider main container -->
       <div id="swiper" class="swiper-container">
@@ -202,44 +211,40 @@ i:hover {
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div id="cover1" class="swiper-slide bgimg-1">
-            <div class="white overlaycover"></div>
-            <div class="top-half center padding bringtofront">
+            <!--<div class="top-half center bringtofront">
                   <h5> We are the Coston's, and we're on a mission to make disciples.</h5>
-            </div>
-            <div class='bottommiddle bringtofront center'>
-              <i class="fa fa-facebook small circle border padding-square"><a href='http://www.facebook.com/costonmission'></a></i>
-              <i class="fa fa-twitter small circle border padding-square"><a href='http://twitter.com/stucoston'></a></i>
-              <i class="fa fa-instagram small circle border padding-square"><a href='https://www.instagram.com/melissacoston/'></a></i>
-              <h5 class="droid">Follow Us</h5>
+            </div>-->
+            <div class='bottommiddle center'>
+              <a class="white-text" href='http://www.facebook.com/costonmission'><i class="fa fa-facebook small circle border padding-square"></i></a>
+              <a class="white-text" href='http://twitter.com/stucoston'><i class="fa fa-twitter small circle border padding-square"></i></a>
+              <a class="white-text" href='https://www.instagram.com/melissacoston/'><i class="fa fa-instagram small circle border padding-square"></i></a>
+              <h4 class="droid black-text">Follow Us</h4>
             </div>
           </div><!--close cover1-->
           
           <div id="cover2" class="swiper-slide bgimg-2">
-            <div class="white overlaycover"></div>
-            <div class="logo topmiddle bringtofront">
-              <img class="responsive-img" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true">
+            <div class=""></div>
+            <div class="logo topmiddle">
+              <img class="responsive-img" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" style="filter:invert(1); -webkit-filter:invert(1);">
             </div>
-            <div class="tagline topmiddle bringtofront"><h5 class="">COSTON<b>MISSION</b></h5></div>
-            <div class='bottommiddle center bringtofront'>
-              <h5 class="droid">Winter 2017</h5>
-              <p class="droid">EDITION 2</p>
+            <div class="tagline topmiddle white-text"><h4 class="tagline thin">COSTON<b>MISSION</b></h4></div>
+            <div class='white-text bottommiddle center'>
+              <h4 class="droid">Winter 2017</h4>
+              <h5 class="droid">EDITION 2</h5>
             </div>
           </div><!--close cover2-->
           
           <div id="page2" class="swiper-slide bgimg-3-1">
             <!--<div class="white overlaycover"></div>-->
             <div class="valign-wrapper">
-              <div class="valign bringtofront">
-                <h4 class="center white-text">All About Birth</h4>
-                <div class="row justify-align white-text">
-                  <div class='col s6'>
+              <div class="valign bringtofront white-text">
+                <div class="row">
+                  <div class='col s10 offset-s1'>
+                    <h4><em>All About Birth</em></h4>
                     <p>We serve an awesome God. He provides for us when we don't ask for it, he protects us without us knowing it, and he blesses us when we don't deserve it. Of his own will he chose us and caused us to be born again, a concept that has become very familiar recently.</p>
-                    <p>The theme of our lives in these last few months has certainly been birth.</p>
-                  </div><!--close left s6 colum-->
-                  <div class='col s6'>
-                    <p>The birth Jesus, the birth of the New Year, and the birth of our third child.</p>
+                    <p>The theme of our lives in these last few months has certainly been birth. The birth Jesus, the birth of the New Year, and the birth of our third child.</p>
                     <p>Each one of these births has had a different impact on our lives and provided us with different experiences and new perspectives. This newsletter will unfold these three events giving you a look into our lives and the impact these events have had on us.</p>
-                  </div> <!--close right s6 colum-->
+                  </div> <!--close colum-->
                 </div><!--close row-->
               </div><!--close valign container-->
             </div><!--close valign-wrapper-->
@@ -270,24 +275,24 @@ i:hover {
           <div id="page5" class="swiper-slide full-size container bgimg-4-2 white-text">
             <div class="valign-wrapper">
               <div class="row valign full-width padding-left">
-                <div class='col s6'>
+                <div class='col s5 offset-s1'>
                   <h5 class="droid"><em>Prayer</em><br/><span class="droid padding-left"><em>Requests</em></span></h5>
-                  <ol style="font-size:1.7vh;" class="justify-align">
+                  <ol style="font-size:1.5vh;" class="">
                     <li>Pray for our church as we begin planting a new congregation in one of the least Christian cities in North America</li><br/>
                     <li>Pray for a mission team that our church is sending to Southern Asia this spring</li><br/>
                     <li>Pray for continued participation in both Stu's and Melissa's discipleship groups</li><br/>
                     <li>Pray for our patience and endurance as we embark on the journey of having three kids</li>
                   </ol>
-                </div><!--close left s6 colum-->
-                <div class='col s6'>
+                </div><!--close left colum-->
+                <div class='col s5'>
                   <h5 class="droid"><em>Recently</em><br/><span class="padding-left"><em>Answered</em></span></h5>
-                  <ol style="font-size:1.7vh;" class="justify-align">
+                  <ol style="font-size:1.5vh;" class="">
                     <li>Melissa and Indie's safe and healthy pregnancy and delivery</li><br/>
                     <li>Plans for the church plant have been completed and event timelines have been drafted</li><br/>
                     <li>We have both been experiencing more courage to engage in spiritual conversations with unbelievers</li><br/>
                     <li>Both of our discipleship groups have been faithfully engaged in each others lives and fruit is continuing to be born</li>
                   </ol>
-                </div> <!--close right s6 colum-->
+                </div> <!--close right colum-->
               </div><!--close row-->
             </div>
             <div class='bottommiddle white-text droid'>
@@ -296,45 +301,44 @@ i:hover {
             </div>
           </div><!--close page5-->
           
-          <div id="page6" class="swiper-slide full-size container theme-l">
-            <div class="valign-wrapper full-height">
-              <div class="valign container">
-                <h4 class="center">Birth of Jesus</h4>
-                <div class="row justify-align">
-                  <div class='col s8 offset-s2 container'>
-                    <p>Information and text to make sure that everything is awesome.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
-                  </div> <!--close right s6 colum-->
-                </div><!--close row-->
-              </div><!--close valign container-->
-            </div><!--close valign-wrapper-->
-            <div class='bottommiddle black-text droid'><em>Page 6</em></div>
+          <div id="page6" class="swiper-slide full-size bgimg-page6">
+            <div class="bottom-half white-text">
+              <div class="padding-left">
+                <h4><em>Birth&nbsp;<span style="font-size:1.5rem;">of</span>&nbsp;Jesus</em></h4>
+              </div>
+              <p>Like many Christian families, we really try to make Christmas about Jesus and not about presents or Santa. We do open presents, we do enjoy giving gifts to each other, and we do watch movies with Santa in them, but as our kids grow up we want them to know that Jesus is the ultimate giver and he is the reason we are able to give gifts on Christmas at all. Without Jesus becoming flesh and blood on earth we could never recieve forgiveness. Jesus' birth into this world is worth far more than the gingerbread houses we made, the hallmark movies we watched, and the lights on the house. He is God incarnate. Immanuel. God with us.</p>  
+            </div>
+            <div class='bottommiddle white-text droid'>
+              <img class="left padding-right" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=25px; style="filter:invert(1);-webkit-filter:invert(1);">
+              <em>Page 6</em>
+            </div>
           </div><!--close page6-->
               
           <div id="page7" class="swiper-slide full-size container theme-l">
-            <div class="valign-wrapper full-height">
-              <div class="valign container">
-                <h4 class="center">Birth of Jesus Cont.</h4>
-              </div><!--close valign container-->
-            </div><!--close valign-wrapper-->
-            <div class='bottommiddle black-text droid'><em>Page 7</em></div>
+            <div class="upper-left borderblue img-shadow"></div>
+            <div class="upper-right borderblue img-shadow"></div>
+            <div class="bottom-half bgimg-bhpage7 img-shadow"></div>
+            <div class='bottommiddle black-text droid'>
+              <img class="left padding-right" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=25px;>
+              <em>Page 7</em>
+            </div>
           </div><!--close page7-->
           
-          <div id="page8" class="swiper-slide full-size container theme-l">
-            <div class="valign-wrapper full-height">
-              <div class="valign container">
-                <h4 class="center">Birth of Jesus Cont.</h4>
-              </div><!--close valign container-->
-            </div><!--close valign-wrapper-->
+          <div id="page8" class="swiper-slide full-size container white">
+            <div class="upper-left">
+              <div class="valign-wrapper">
+                <div class='valign container center'>
+                  Jeremiah and Adah tore into the presents Christmas morning.
+                </div>
+              </div>
+            </div>
+            <div class="upper-right borderblue img-shadow"></div>
+            <div class="lower-left borderblue img-shadow"></div>
+            <div class="lower-right bgimg-lrpage8 img-shadow"></div>
             <div class='bottommiddle black-text droid'><em>Page 8</em></div>
           </div><!--close page8-->
           
-          <div id="page9" class="swiper-slide full-size container theme-l">
-            <div class="valign-wrapper full-height">
-              <div class="valign container">
-                <h4 class="center">Birth of Jesus Cont.</h4>
-              </div><!--close valign container-->
-            </div><!--close valign-wrapper-->
+          <div id="page9" class="swiper-slide full-size container bgimg-page9">
             <div class='bottommiddle black-text droid'><em>Page 9</em></div>
           </div><!--close page9-->
           
@@ -523,8 +527,8 @@ i:hover {
           
         </div><!--close swiper-wrapper-->
         <!-- If we need navigation buttons -->
-        <div class="hide-on-small-and-down swiper-button-prev swiper-button-black"></div>
-        <div class="hide-on-small-and-down swiper-button-next swiper-button-black"></div>
+        <div class="hide-on-small-and-down swiper-button-prev swiper-button-white"></div>
+        <div class="hide-on-small-and-down swiper-button-next swiper-button-white"></div>
       </div><!--close swiper-container-->
     <!--</div>--><!--close valign container-->
   <!--</div>--><!--close valign-wrapper-->
@@ -533,7 +537,7 @@ i:hover {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
   <script> 
   var w = window.innerWidth;
-  if(w > 1000) {
+  if(w > 992) {
     var mySwiper = new Swiper ('.swiper-container', {
       // Optional parameters
       direction: 'horizontal',
@@ -559,8 +563,8 @@ i:hover {
       mousewheelControl: 'true',
       keyboardControl: 'true',
       grabCursor: 'true',
-      nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev',
+     //nextButton: '.swiper-button-next',
+     //prevButton: '.swiper-button-prev',
     })
   }
   </script>
