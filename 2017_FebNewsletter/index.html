@@ -69,8 +69,7 @@
     }
     /*** double page view ... ***/
     
-    @media screen and (max-device-width: 480px) and (orientation: landscape),
-    screen and (min-width: 992px) {
+    @media screen and (min-aspect-ratio: 4/3) {
       .swiper-container {
         width: 123.6vh;
         max-width: 95%;
@@ -81,8 +80,7 @@
     }
     /*** single page view ... ***/
     
-    @media screen and (max-device-width: 480px) and (orientation: portrait),
-    screen and (max-width:992px) {
+    @media screen and (max-aspect-ratio: 4/3) {
       .swiper-container {
         width: 61.8vh;
         max-width: 95%;
@@ -745,7 +743,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
   <script>
     var w = window.innerWidth;
-    if(w > 992) {
+    var h = window.innerHeight;
+    if(w > (1.33*h)) {
       var mySwiper = new Swiper ('.swiper-container', {
         // Optional parameters
         direction: 'horizontal',
