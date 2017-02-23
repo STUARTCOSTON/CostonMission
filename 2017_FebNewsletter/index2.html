@@ -119,6 +119,7 @@
     }
     
     header {
+      position:fixed;
       line-height: 40px;
     }
     
@@ -177,8 +178,14 @@
         width: 123.6vh;
         max-width: 95%;
         height: 80vh;
+        top: 40px;
         box-shadow: 2px 2px 10px #555;
         border: 1px solid darkgrey;
+      }
+      
+      header {
+        width:123.6vh;
+        max-width: 95%;
       }
     }
     /*** single page view ... ***/
@@ -188,34 +195,40 @@
         width: 61.8vh;
         max-width: 95%;
         height: 80vh;
+        top:40px;
         box-shadow: 1px 1px 6px #555;
         border: 1px solid darkgrey;
+      }
+      
+      header {
+        width: 61.8vh;
+        max-width: 95%;
       }
     }
     
     .swiper-button-next,
     .swiper-button-prev {
       position: absolute;
-      top: 95%;
-      width: 3vh;
-      margin-top: -22px;
-      z-index: 10;
+      top: 50%;
+      width: 35px;
+      z-index: 100;
       cursor: pointer;
-      -moz-background-size: 3vh;
-      -webkit-background-size: 3vh;
-      background-size: 3vh;
+      -moz-background-size: 10px;
+      -webkit-background-size: 10px;
+      background-size: 10px;
       background-position: center;
       background-repeat: no-repeat
     }
     
     .swiper-button-prev,
     .swiper-container-rtl .swiper-button-next {
-      left: 5%;
+      left: auto;
+      right: 40px;
     }
     
     .swiper-button-next,
     .swiper-container-rtl .swiper-button-prev {
-      right: 5%;
+      right: 0;
     }
     
     .theme-d {
@@ -316,7 +329,7 @@
       color: white;
       cursor: pointer;
       border-color: black;
-      box-shadow: 6px 6px 6px #555;
+      box-shadow: 0px 0px 10px #fff;
     }
     
     .img-shadow {
@@ -331,26 +344,36 @@
       border: 1px solid blue;
     }
     .left-page {
+      position: absolute;
+      top: 0;
       height: 100%;
+      width: 100%;
       background: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.2)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, rgba(0,0,0,0), rgba(0,0,0,0.2)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, rgba(0,0,0,0), rgba(0,0,0,0.2)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.2)); /* Standard syntax (must be last) */
+      background: -o-linear-gradient(right, rgba(0,0,0,0), rgba(0,0,0,0.2)); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(right, rgba(0,0,0,0), rgba(0,0,0,0.2)); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.2)); /* Standard syntax (must be last) */
 }
     .right-page {
+      position: absolute;
+      top: 0;
       height: 100%;
+      width: 100%;
+      z-index: 0;
       background: -webkit-linear-gradient(right, rgba(0,0,0,0), rgba(0,0,0,0.2)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.2)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.2)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.2)); /* Standard syntax (must be last) */
+      background: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.2)); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.2)); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.2)); /* Standard syntax (must be last) */
 }
   </style>
 </head>
 
 <body class="grey lighten-3 screen-size">
   <div id="newsletter">
-    <header class='center'>
-      <a class='black-text' href='http://www.costonmision.com' target='_blank'><span style="font-size:1.5rem;">www.CostonMission.com</span></a>
+    <header class='topmiddle' style="top:20px;">
+      <a class='black-text' href='http://www.costonmision.com' target='_blank'><span style="font-size:1.5rem; padding-left: 10px;">www.CostonMission.com</span></a>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev swiper-button-black"></div>
+      <div class="swiper-button-next swiper-button-black"></div>
     </header>
     <!-- Slider main container -->
     <div id="swiper" class="swiper-container">
@@ -358,11 +381,8 @@
       <div class="swiper-wrapper">
         <!-- Slides -->
         <div id="cover1" class="swiper-slide bgimg-cover-back">
-          
-          <!--<div class="top-half center bringtofront">
-                  <h5> We are the Coston's, and we're on a mission to make disciples.</h5>
-            </div>-->
-          <div class='top-half center'>
+          <div class="middle full-width black" style="height: 25%; opacity: 0.6;"></div>
+          <div class='middle center full-width padding'>
             <a class="white-text" href='http://www.facebook.com/costonmission'><i class="fa fa-facebook small circle border padding-square"></i></a>
             <a class="white-text" href='http://twitter.com/stucoston'><i class="fa fa-twitter small circle border padding-square"></i></a>
             <a class="white-text" href='https://www.instagram.com/melissacoston/'><i class="fa fa-instagram small circle border padding-square"></i></a>
@@ -372,6 +392,7 @@
         <!--close cover1-->
 
         <div id="cover2" class="swiper-slide bgimg-cover-front">
+          <div class="right-page"></div>
           <div class="logo topmiddle">
             <img class="responsive-img" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" style="filter:invert(1); -webkit-filter:invert(1);">
           </div>
@@ -389,7 +410,7 @@
             <div class="valign bringtofront white-text">
               <div class="row">
                 <div class='col s10 offset-s1'>
-                  <h4><em>All <span style="font-size:1.5rem;">About </span><br/><span class="padding-left">Birth</em></span></h4>
+                  <h4><em>All <span style="font-size:1.5rem;">About </span><br/><span class="padding-left">Birth</span></em></h4>
                   <p>We serve an awesome God. He provides for us when we don't ask for it, he protects us without us knowing it, and he blesses us when we don't deserve it. Of his own will he chose us and caused us to be born again, a concept that has become
                     very familiar recently.</p>
                   <p>The theme of our lives in these last few months has certainly been birth. The birth Jesus, the birth of the New Year, and the birth of our third child.</p>
@@ -403,17 +424,17 @@
             <!--close valign container-->
           </div>
           <!--close valign-wrapper-->
-          <div class='bottommiddle white-text droid center'>
-            <img class="left padding-right" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=10% style="filter:invert(1);-webkit-filter:invert(1);">
-            <em>Page 2</em>
+          <div class='bottommiddle white-text droid full-width'>
+            <img class="left padding-right padding-left" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=15vh style="filter:invert(1);-webkit-filter:invert(1);">
+            <em class="right padding-right">Page 2</em>
           </div>
-        </div>
-        <!--close page2-->
+        </div><!--close page2-->
 
         <div id="page3" class="swiper-slide container bgimg-3-2">
-          <div class='bottommiddle white-text droid'>
-            <img class="left padding-right" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=10% style="filter:invert(1);-webkit-filter:invert(1);">
-            <em>Page 3</em>
+          <div class="right-page"></div>
+          <div class='bottommiddle white-text droid full-width'>
+            <a class='white-text padding-left' href='http://www.costonmision.com' target='_blank'>CostonMission.com</a>
+            <em class="right padding-right">Page 3</em>
           </div>
         </div>
         <!--close page3-->
@@ -423,15 +444,16 @@
           <div class="container">
             <h4 class="duty">PRAY</h4>
           </div>
-          <div class='bottommiddle white-text droid'>
-            <img class="left padding-right" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=10% style="filter:invert(1);-webkit-filter:invert(1);">
-            <em>Page 4</em>
+          <div class='bottommiddle white-text droid full-width'>
+            <img class="left padding-right padding-left" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=15vh style="filter:invert(1);-webkit-filter:invert(1);">
+            <em class="right padding-right">Page 4</em>
           </div>
         </div>
         <!--close page4-->
 
         <div id="page5" class="swiper-slide full-size container bgimg-4-2 white-text">
-          <div class="valign-wrapper">
+          <div class="right-page"></div>
+          <div class="bringtofront valign-wrapper">
             <div class="row valign full-width padding-left">
               <div class='col s5 offset-s1'>
                 <h5 class="droid"><em>Prayer</em><br/><span class="droid padding-left"><em>Requests</em></span></h5>
@@ -456,9 +478,9 @@
             </div>
             <!--close row-->
           </div><!--close valign wrapper-->
-          <div class='bottommiddle white-text droid'>
-            <img class="left padding-right" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=10% style="filter:invert(1);-webkit-filter:invert(1);">
-            <em>Page 5</em>
+          <div class='bottommiddle white-text droid full-width'>
+            <a class='white-text padding-left' href='http://www.costonmision.com' target='_blank'>CostonMission.com</a>
+            <em class="right padding-right">Page 5</em>
           </div>
         </div>
         <!--close page5-->
@@ -470,9 +492,9 @@
             </div>
             <p>Like many Christian families, we really try to make Christmas about Jesus and not about presents or Santa. We do open presents, we do enjoy giving gifts to each other, and we do watch movies with Santa in them, but as our kids grow up we want them to know that Jesus is the ultimate giver and he is the reason we are able to give gifts on Christmas at all. Without Jesus becoming flesh and blood on earth we could never recieve forgiveness. Jesus' birth into this world is worth far more than the gingerbread houses we made, the hallmark movies we watched, and the lights on the house. He is God incarnate. Immanuel. God with us.</p>
           </div>
-          <div class='bottommiddle white-text droid'>
-            <img class="left padding-right" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=10% style="filter:invert(1);-webkit-filter:invert(1);">
-            <em>Page 6</em>
+          <div class='bottommiddle white-text droid full-width'>
+            <img class="left padding-right padding-left" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=15vh style="filter:invert(1);-webkit-filter:invert(1);">
+            <em class="right padding-right">Page 6</em>
           </div>
         </div>
         <!--close page6-->
@@ -482,9 +504,9 @@
           <div class="upper-right bgimg-page7-2 img-shadow"></div>
           <div class="bottom-half bgimg-page7-3 img-shadow"></div>
           <p class="bottommiddle center white-text bringtofront" style="bottom: 5%;">Again Jesus spoke to them, saying, “I am the light of the world. Whoever follows me will not walk in darkness, but will have the light of life.” <span><em>John 8:12</em></span></p>
-          <div class='bottommiddle black-text droid'>
-            <img class="left padding-right" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=10%>
-            <em>Page 7</em>
+          <div class='bottommiddle black-text droid full-width'>
+            <a class='black-text padding-left' href='http://www.costonmision.com' target='_blank'>CostonMission.com</a>
+            <em class="right padding-right">Page 7</em>
           </div>
         </div>
         <!--close page7-->
@@ -499,17 +521,18 @@ Every good gift and every perfect gift is from above, coming down from the Fathe
           <div class="upper-right bgimg-page8-1 img-shadow"></div>
           <div class="lower-left bgimg-page8-2 img-shadow"></div>
           <div class="lower-right bgimg-page8-3 img-shadow"></div>
-          <div class='bottommiddle black-text droid'>
-            <img class="left padding-right" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=10%>
-            <em>Page 8</em>
+          <div class='bottommiddle black-text droid full-width'>
+            <img class="left padding-right padding-left" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=15vh>
+            <em class="right padding-right">Page 8</em>
           </div>
         </div>
         <!--close page8-->
 
         <div id="page9" class="swiper-slide full-size container bgimg-page9">
-          <div class='bottommiddle white-text droid'>
-            <img class="left padding-right" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=10% style="filter:invert(1);-webkit-filter:invert(1);">
-            <em>Page 9</em>
+          <div class="right-page"></div>
+          <div class='bottommiddle white-text droid full-width'>
+            <a class='white-text padding-left' href='http://www.costonmision.com' target='_blank'>CostonMission.com</a>
+            <em class="right padding-right">Page 9</em>
           </div>
         </div>
         <!--close page9-->
@@ -518,14 +541,15 @@ Every good gift and every perfect gift is from above, coming down from the Fathe
           <div class="container">
             <h4 class="duty">LEARN</h4>
           </div>
-          <div class='bottommiddle white-text droid'>
-            <img class="left padding-right" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=10% style="filter:invert(1);-webkit-filter:invert(1);">
-            <em>Page 10</em>
+          <div class='bottommiddle white-text droid full-width'>
+            <img class="left padding-right padding-left" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=15vh style="filter:invert(1);-webkit-filter:invert(1);">
+            <em class="right padding-right">Page 10</em>
           </div>
         </div>
         <!--close page10-->
 
         <div id="page11" class="swiper-slide full-size container bgimg-page11">
+          <div class='right-page'></div>
           <div class="valign-wrapper">
             <div class="row valign full-width padding-left white-text">
               <div class='col s5 offset-s1'>
@@ -535,21 +559,22 @@ Every good gift and every perfect gift is from above, coming down from the Fathe
               <!--close left colum-->
               <div class='col s5'>
                 <h5><em><span style="font-size:1rem;">What </span>We Are<br/><span class="droid padding-left">Memorizing</span></em></h5>
-                <p>Melissa's discipleship group has memorized most of James 1 and Romans xyz. My discipleship group has memorized a spattering of verses including Psalm 1, the Romans Road, and Hebrews 1:1-2.</p>
+                <p>Melissa's discipleship group has memorized most of James 1 and Romans xyz. My discipleship group has memorized a spattering of verses including Psalm 1, the Romans Road, and Hebrews 11:1-2.</p>
               </div>
               <!--close right colum-->
             </div>
             <!--close row-->
           </div><!--close valign wrapper-->
-          <div class='bottommiddle white-text droid'>
-            <img class="left padding-right" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=10% style="filter:invert(1);-webkit-filter:invert(1);">
-            <em>Page 11</em>
+          <div class='bottommiddle white-text droid full-width'>
+            <a class='white-text padding-left' href='http://www.costonmision.com' target='_blank'>CostonMission.com</a>
+            <em class="right padding-right">Page 11</em>
           </div>
         </div>
         <!--close page11-->
 
         <div id="page12" class="swiper-slide container bgimg-page12">
-          <div class="bottom-half" style="bottom:30%;">
+          <div class="black overlay"></div>
+          <div class="bringtofront bottom-half white-text" style="bottom:30%;">
             <div class="padding-left">
               <h4><em>Birth <span style="font-size:1.5rem;">of a </span><br/><span class="padding-left">New Year</span></em></h4>
             </div>
@@ -557,9 +582,9 @@ Every good gift and every perfect gift is from above, coming down from the Fathe
             <p>Viewing the end of the year in this way allows us to look back over the past 365 days and see what we wished we had done more of and what we wish we had done less of. It gives us an opportunity to face the question, "did I live it well?" It gives us an opportunity to see whether or not we feel like Jesus is going to say, "Well done, good and faithful servant" <em>Matthew 25:21</em>, or "I never knew you; depart from me, you workers of lawlessness." <em>Matthew 7:23</em></p>
             <p>With a new year comes more grace and a new opportunity to repent.</p> 
           </div>
-          <div class='bottommiddle droid'>
-            <img class="left padding-right" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=10%>
-            <em>Page 12</em>
+          <div class='bottommiddle white-text droid full-width'>
+            <img class="left padding-right padding-left" src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5221.png?raw=true" width=15vh style="filter:invert(1); -webkit-filter:invert(1);">
+            <em class="right padding-right">Page 12</em>
           </div>
         </div>
         <!--close page12-->
@@ -729,20 +754,9 @@ Every good gift and every perfect gift is from above, coming down from the Fathe
             <!--close row-->
           </div>
           <div class='bottommiddle black-text droid'><em>Page 22</em></div>
-        </div>
-        <!--close page22-->
-
-      </div>
-      <!--close swiper-wrapper-->
-      <!-- If we need navigation buttons -->
-      <div class="hide-on-small-and-down swiper-button-prev swiper-button-white"></div>
-      <div class="hide-on-small-and-down swiper-button-next swiper-button-white"></div>
-    </div>
-    <!--close swiper-container-->
-    <!--</div>-->
-    <!--close valign container-->
-    <!--</div>-->
-    <!--close valign-wrapper-->
+        </div><!--close page22-->
+      </div><!--close swiper-wrapper-->
+    </div><!--close swiper-container-->
   <!--close newsletter-->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
@@ -755,6 +769,7 @@ Every good gift and every perfect gift is from above, coming down from the Fathe
         direction: 'horizontal',
         loop: true,
         effect: 'slide',
+        spaceBetween: 2,
         slidesPerView: 2,
         slidesPerGroup: 2,
         mousewheelControl: 'true',
@@ -770,13 +785,14 @@ Every good gift and every perfect gift is from above, coming down from the Fathe
         direction: 'horizontal',
         loop: true,
         effect: 'slide',
+        spaceBetween: 2,
         slidesPerView: 1,
         slidesPerGroup: 1,
         mousewheelControl: 'true',
         keyboardControl: 'true',
         grabCursor: 'true',
-       //nextButton: '.swiper-button-next',
-       //prevButton: '.swiper-button-prev',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
       })
     }
   </script>
