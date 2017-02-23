@@ -27,7 +27,11 @@
 .bgimg-page9,
 .bgimg-page10,
 .bgimg-page11,
-.bgimg-page12 {
+.bgimg-page12,
+.bgimg-page13-1,
+.bgimg-page13-2,
+.bgimg-page13-3,
+.bgimg-page14-1 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -111,11 +115,32 @@
   background-image: url('https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5859.jpg?raw=true');
   background-position: right;
 }
+
+.bgimg-page13-1 {
+  background-image: url('https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5758.jpg?raw=true');
+}
+
+.bgimg-page13-2 {
+  background-image: url('https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5801.jpg?raw=true');
+}
+
+.bgimg-page13-3 {
+  background-image: url('https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5776.jpg?raw=true');
+}
+
+.bgimg-page14-1 {
+  background-image: url('https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/IMG_5776.jpg?raw=true');
+}
     
     html {
       font-family: 'Libre Franklin', sans-serif;
       font-size: 1.7vh;
       font-weight: 100;
+    }
+    
+    video {
+      margin:0;
+      padding:0;
     }
     
     header {
@@ -247,6 +272,7 @@
       height: 40%;
       width: 90%;
       margin: 5%;
+      overflow:hidden;
     }
     
     .top-half {
@@ -364,6 +390,15 @@
       background: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.2)); /* For Firefox 3.6 to 15 */
       background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.2)); /* Standard syntax (must be last) */
 }
+    
+    .video {
+      position: absolute;
+      z-index:1;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+    }
   </style>
 </head>
 
@@ -410,7 +445,7 @@
             <div class="valign bringtofront white-text">
               <div class="row">
                 <div class='col s10 offset-s1'>
-                  <h4><em>All <span style="font-size:1.5rem;">About </span><br/><span class="padding-left">Birth</span></em></h4>
+                  <h4><em>All <span style="font-size:1.5rem;">About </span><br/><span class="padding-left">Birth</em></span></h4>
                   <p>We serve an awesome God. He provides for us when we don't ask for it, he protects us without us knowing it, and he blesses us when we don't deserve it. Of his own will he chose us and caused us to be born again, a concept that has become
                     very familiar recently.</p>
                   <p>The theme of our lives in these last few months has certainly been birth. The birth Jesus, the birth of the New Year, and the birth of our third child.</p>
@@ -573,8 +608,8 @@ Every good gift and every perfect gift is from above, coming down from the Fathe
         <!--close page11-->
 
         <div id="page12" class="swiper-slide container bgimg-page12">
-          <div class="black overlay"></div>
-          <div class="bringtofront bottom-half white-text" style="bottom:30%;">
+          <div class="black overlaycover"></div>
+          <div class="bringtofront bottom-half white-text" style="bottom:20%;">
             <div class="padding-left">
               <h4><em>Birth <span style="font-size:1.5rem;">of a </span><br/><span class="padding-left">New Year</span></em></h4>
             </div>
@@ -589,31 +624,36 @@ Every good gift and every perfect gift is from above, coming down from the Fathe
         </div>
         <!--close page12-->
 
-        <div id="page12" class="swiper-slide full-size container theme-l">
-          <div class="valign-wrapper full-height">
-            <div class="valign container">
-              <h4 class="center">Birth of New Year Cont.</h4>
-            </div>
-            <!--close valign container-->
-          </div>
-          <!--close valign-wrapper-->
-          <div class='bottommiddle black-text droid'><em>Page 12</em></div>
-        </div>
-        <!--close page12-->
-
         <div id="page13" class="swiper-slide full-size container theme-l">
-          <div class="valign-wrapper full-height">
-            <div class="valign container">
-              <h4 class="center">Birth of New Year Cont.</h4>
-            </div>
-            <!--close valign container-->
+          <div class="top-half bgimg-page13-1 img-shadow"></div>
+          <div class="lower-left bgimg-page13-2 img-shadow"></div>
+          <div class="lower-right bgimg-page13-3 img-shadow"></div>
+          <div class='bottommiddle white-text droid full-width'>
+            <a class='white-text padding-left' href='http://www.costonmision.com' target='_blank'>CostonMission.com</a>
+            <em class="right padding-right">Page 13</em>
           </div>
-          <!--close valign-wrapper-->
-          <div class='bottommiddle black-text droid'><em>Page 13</em></div>
         </div>
         <!--close page13-->
 
         <div id="page14" class="swiper-slide full-size container theme-l">
+         <div class="top-half img-shadow theme-d white-text">
+            <div class="valign-wrapper">
+              <div class='valign container center'>
+Every good gift and every perfect gift is from above, coming down from the Father of lights with whom there is no variation or shadow due to change. <span><em>James 1:17</em></span></p></div>
+            </div><!--close valign-->
+          </div><!--close top-half-->
+          <div class="bottom-half img-shadow">
+            <video class="video middle" autoplay="autoplay" loop="loop" muted="" width="300" height="150">
+              <source src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/BackYardSled480p.mp4?raw=true" type="video/mp4" />
+              <source src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/BackYardSled480p.ogv?raw=true" type="video/ogg" />
+              <source src="https://github.com/stucoston/CostonMission/blob/master/2017_FebNewsletter/BackYardSled480p.webm?raw=true" type="video/webm" />
+            </video>
+          </div>
+          <div class='bottommiddle black-text droid'><em>Page 14</em></div>
+        </div>
+        <!--close page14-->
+
+        <div id="page15" class="swiper-slide full-size container theme-l">
           <div class="valign-wrapper full-height">
             <div class="valign container">
               <h4 class="center">Birth of New Year Cont.</h4>
@@ -621,19 +661,22 @@ Every good gift and every perfect gift is from above, coming down from the Fathe
             <!--close valign container-->
           </div>
           <!--close valign-wrapper-->
-          <div class='bottommiddle black-text droid'><em>Page 14</em></div>
-        </div>
-        <!--close page14-->
-
-        <div id="page15" class="swiper-slide full-size container theme-d">
-          <div class="container">
-            <h4 class="duty">OBEY</h4>
+          <div class='bottommiddle white-text droid full-width'>
+            <a class='white-text padding-left' href='http://www.costonmision.com' target='_blank'>CostonMission.com</a>
+            <em class="right padding-right">Page 15</em>
           </div>
-          <div class='bottommiddle black-text droid'><em>Page 15</em></div>
         </div>
         <!--close page15-->
 
         <div id="page16" class="swiper-slide full-size container theme-d">
+          <div class="container">
+            <h4 class="duty">OBEY</h4>
+          </div>
+          <div class='bottommiddle black-text droid'><em>Page 16</em></div>
+        </div>
+        <!--close page16-->
+
+        <div id="page17" class="swiper-slide full-size container theme-d">
           <div class="container">
             <div class="row justify-align bottom-half">
               <div class='col s6'>
@@ -659,11 +702,14 @@ Every good gift and every perfect gift is from above, coming down from the Fathe
             </div>
             <!--close row-->
           </div>
-          <div class='bottommiddle black-text droid'><em>Page 16</em></div>
+          <div class='bottommiddle white-text droid full-width'>
+            <a class='white-text padding-left' href='http://www.costonmision.com' target='_blank'>CostonMission.com</a>
+            <em class="right padding-right">Page 17</em>
+          </div>
         </div>
-        <!--close page16-->
+        <!--close page17-->
 
-        <div id="page17" class="swiper-slide full-size container theme-l">
+        <div id="page18" class="swiper-slide full-size container theme-l">
           <div class="valign-wrapper full-height">
             <div class="valign container">
               <h4 class="center">Birth of Indie</h4>
@@ -675,18 +721,6 @@ Every good gift and every perfect gift is from above, coming down from the Fathe
                 <!--close right s6 colum-->
               </div>
               <!--close row-->
-            </div>
-            <!--close valign container-->
-          </div>
-          <!--close valign-wrapper-->
-          <div class='bottommiddle black-text droid'><em>Page 17</em></div>
-        </div>
-        <!--close page17-->
-
-        <div id="page18" class="swiper-slide full-size container theme-l">
-          <div class="valign-wrapper full-height">
-            <div class="valign container">
-              <h4 class="center">Birth of Indie Cont.</h4>
             </div>
             <!--close valign container-->
           </div>
@@ -703,7 +737,10 @@ Every good gift and every perfect gift is from above, coming down from the Fathe
             <!--close valign container-->
           </div>
           <!--close valign-wrapper-->
-          <div class='bottommiddle black-text droid'><em>Page 19</em></div>
+          <div class='bottommiddle white-text droid full-width'>
+            <a class='white-text padding-left' href='http://www.costonmision.com' target='_blank'>CostonMission.com</a>
+            <em class="right padding-right">Page 19</em>
+          </div>
         </div>
         <!--close page19-->
 
@@ -719,15 +756,30 @@ Every good gift and every perfect gift is from above, coming down from the Fathe
         </div>
         <!--close page20-->
 
-        <div id="page21" class="swiper-slide full-size container theme-d">
-          <div class="container">
-            <h4 class="duty">WORK</h4>
+        <div id="page21" class="swiper-slide full-size container theme-l">
+          <div class="valign-wrapper full-height">
+            <div class="valign container">
+              <h4 class="center">Birth of Indie Cont.</h4>
+            </div>
+            <!--close valign container-->
           </div>
-          <div class='bottommiddle black-text droid'><em>Page 21</em></div>
+          <!--close valign-wrapper-->
+          <div class='bottommiddle white-text droid full-width'>
+            <a class='white-text padding-left' href='http://www.costonmision.com' target='_blank'>CostonMission.com</a>
+            <em class="right padding-right">Page 21</em>
+          </div>
         </div>
         <!--close page21-->
 
         <div id="page22" class="swiper-slide full-size container theme-d">
+          <div class="container">
+            <h4 class="duty">WORK</h4>
+          </div>
+          <div class='bottommiddle black-text droid'><em>Page 22</em></div>
+        </div>
+        <!--close page22-->
+
+        <div id="page23" class="swiper-slide full-size container theme-d">
           <div class="container">
             <div class="row justify-align bottom-half">
               <div class='col s6'>
@@ -752,9 +804,11 @@ Every good gift and every perfect gift is from above, coming down from the Fathe
               <!--close right s6 colum-->
             </div>
             <!--close row-->
+          <div class='bottommiddle white-text droid full-width'>
+            <a class='white-text padding-left' href='http://www.costonmision.com' target='_blank'>CostonMission.com</a>
+            <em class="right padding-right">Page 23</em>
           </div>
-          <div class='bottommiddle black-text droid'><em>Page 22</em></div>
-        </div><!--close page22-->
+        </div><!--close page23-->
       </div><!--close swiper-wrapper-->
     </div><!--close swiper-container-->
   <!--close newsletter-->
